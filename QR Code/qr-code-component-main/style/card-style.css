@@ -1,6 +1,7 @@
 .qrcode {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   gap: var(--spacing-300);
   background-color: var(--white);
   border-radius: 1.25rem;
