@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style/blog-preview-global-style.css">
   
   <title>Code by Marco | Frontend Mentor Challenge</title>
 
@@ -13,7 +14,12 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
     .attribution { position: absolute; bottom: 10px; justify-self: center; }
+
+    h1 { display: none; }
   </style>
+
+  <script src="./components/blogPreviewCard.js"></script>
+  <script src="./components/blogPreviewTag.js"></script>
 </head>
 <body>
   <header>
@@ -21,13 +27,22 @@
   </header>
 
   <main>
-
+    <cbm-blog-preview-card
+      src="./assets/images/illustration-article.svg"
+      date="21 Dec 2023"
+      title="HTML & CSS foundations"
+      subtitle="These languages are the backbone of every website, defining structure, content, and presentation."
+      avatar-src="./assets/images/image-avatar.webp"
+      author="Greg Hooper"
+    >
+      <cbm-blog-preview-tag>Learning</cbm-blog-preview-tag>
+    </cbm-blog-preview-card>
   </main>
   
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Marco Zulian</a>.
     </div>
   </footer>
 </body>

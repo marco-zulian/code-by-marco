@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'figtree';
+  src: url("../assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+
+:root {
+  --blog-preview-yellow: #f4d04e;
+  --blog-preview-gray-950: #111111;
+  --blog-preview-gray-500: #6b6b6b;
+  --blog-preview-white: #ffffff;
+
+  --blog-preview-spacing-300: 1.5rem;
+  --blog-preview-spacing-150: 0.75rem;
+  --blog-preview-spacing-100: 0.5rem;
+  --blog-preview-spacing-50: 0.25rem;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  background-color: var(--blog-preview-yellow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

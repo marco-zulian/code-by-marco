@@ -1,0 +1,22 @@
+.preview-tag {
+  display: inline;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: var(--blog-preview-yellow);
+
+  .preview-tag__name {
+    display: inline;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.blog-preview-text-preset-4 {
+  font-family: 'figtree';
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: bolder;
+}
