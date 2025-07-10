@@ -1,0 +1,43 @@
+:root {
+  --slate-900: #1f314f;
+  --slate-500: #68778d;
+  --slate-300: #d5e1e7;
+  --white: #ffffff;
+
+  --spacing-500: 2.5rem;
+  --spacing-300: 1.5rem;
+  --spacing-100: 1rem;
+
+  .text-preset-1 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: 0;
+  }
+
+  .text-preset-2 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+body {
+  background-color: var(--slate-300);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

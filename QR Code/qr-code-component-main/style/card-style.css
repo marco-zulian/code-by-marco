@@ -1,0 +1,32 @@
+.qrcode {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  background-color: var(--white);
+  border-radius: 1.25rem;
+  padding: var(--spacing-100) var(--spacing-100) var(--spacing-500) var(--spacing-100);
+  max-width: 20rem;
+  box-shadow: 0 25px 25px rgba(0,0,0,0.047);
+
+  .qrcode__image {
+    width: 100%;
+    border-radius: 0.75rem;
+    object-fit: contain;
+  }
+
+  .qrcode__text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-inline: var(--spacing-100);
+    gap: var(--spacing-100);
+
+    .qrcode__text--title {
+      color: var(--slate-900);
+    }
+
+    .qrcode__text--subtitle {
+      color: var(--slate-500)
+    }
+  }
+}
