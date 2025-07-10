@@ -8,7 +8,12 @@
     border: 1px solid var(--blog-preview-gray-950);
     border-radius: 20px;
     box-shadow: var(--blog-preview-gray-950) var(--blog-preview-spacing-100) var(--blog-preview-spacing-100);
+    box-sizing: border-box;
     max-width: 25rem;
+
+    .preview-card__image {
+      border-radius: 10px;
+    }
 
     .preview-card__creation-date {
       color: var(--blog-preview-gray-950);
