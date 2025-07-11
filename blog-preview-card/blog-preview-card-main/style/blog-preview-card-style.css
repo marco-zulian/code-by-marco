@@ -52,8 +52,10 @@
   :hover {
     cursor: pointer;
 
-    .preview-card__title {
-      color: var(--blog-preview-yellow);
+    .preview-card__content {
+      .preview-card__title {
+        color: var(--blog-preview-yellow);
+      }
     }
   }
 }

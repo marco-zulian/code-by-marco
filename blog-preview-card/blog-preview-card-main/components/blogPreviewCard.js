@@ -20,7 +20,7 @@ class BlogPreviewCard extends HTMLElement {
         </div>
 
         <div class="preview-card__author">
-          <img class="preview-card__author--image" />
+          <img class="preview-card__author--image" alt="blog post author's avatar image"/>
           <p class="preview-card__author--name blog-preview-text-preset-4"></p>
         </div>
       </div>
