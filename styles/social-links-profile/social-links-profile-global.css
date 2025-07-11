@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Inter bold';
+  src: url(../../assets/social-links-profile/fonts/static/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Inter regular';
+  src: url(../../assets/social-links-profile/fonts/static/Inter-Regular.ttf);
+}
+
+:root {
+  --social-links-color-gray-900: #141414;
+  --social-links-color-gray-800: #1f1f1f;
+  --social-links-color-gray-700: #333333;
+  --social-links-color-yellow: #c4f82a;
+  --social-links-color-white: #ffffff;
+
+  --social-links-spacing-500: 2.5rem;
+  --social-links-spacing-300: 1.5rem;
+  --social-links-spacing-200: 1rem;
+  --social-links-spacing-150: 0.75rem;
+  --social-links-spacing-100: 0.5rem;
+  --social-links-spacing-50: 0.25rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--social-links-color-gray-900);
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.attribution { 
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  justify-self: center;
+  color: var(--social-links-color-white);
+
+  a {
+    color: var(--social-links-color-yellow);
+  }
+}

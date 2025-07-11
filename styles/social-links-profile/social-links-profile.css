@@ -1,0 +1,88 @@
+:host {
+  --social-links-profile-padding-inline: var(--social-links-spacing-300);
+  --social-links-profile-padding-block: var(--social-links-spacing-300);
+  --social-links-profile-padding-inline-md: var(--social-links-spacing-500);
+  --social-links-profile-padding-block-md: var(--social-links-spacing-500);
+  --social-links-profile-sections-gap: var(--social-links-spacing-300);
+  --social-links-profile-background-color: var(--social-links-color-gray-800);
+  --social-links-profile-name-color: var(--social-links-color-white);
+  --social-links-profile-subtitle-color: var(--social-links-color-yellow);
+  --social-links-profile-bio-color: var(--social-links-color-white);
+  --social-links-profile-links-gap: var(--social-links-spacing-200);
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    width: 327px;
+    gap: var(--social-links-profile-sections-gap);
+    padding: var(--social-links-profile-padding-block) var(--social-links-profile-padding-inline);
+    background-color: var(--social-links-profile-background-color);
+    justify-content: center;
+    border-radius: 12px;
+
+    .social-links__avatar {
+      width: 88px;
+      border-radius: 50%;
+      align-self: center;
+    }
+
+    .social-links__info {
+      align-content: center;
+
+      .social-links__info--name {
+        text-align: center;
+        color: var(--social-links-profile-name-color);
+      }
+
+      .social-links__info--subtitle {
+        text-align: center;
+        color: var(--social-links-profile-subtitle-color);
+      }
+    }
+
+    .social-links__bio {
+      text-align: center;
+      color: var(--social-links-profile-bio-color);
+    }
+
+    .social-links__links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--social-links-profile-links-gap); 
+    }
+  }
+
+  .text-preset-1 {
+    font-family: 'Inter bold';
+    line-height: 150%;
+    letter-spacing: 0;
+    font-size: 24px;
+  }
+
+  .text-preset-2 {
+    font-family: 'Inter regular';
+    line-height: 150%;
+    letter-spacing: 0;
+    font-size: 14px;
+  }
+
+  .text-preset-2-bold {
+    font-family: 'Inter bold';
+    line-height: 150%;
+    letter-spacing: 0;
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .social-links {
+      width: 384px;
+      padding: var(--social-links-profile-padding-block-md) var(--social-links-profile-padding-inline-md);
+    } 
+  }
+}

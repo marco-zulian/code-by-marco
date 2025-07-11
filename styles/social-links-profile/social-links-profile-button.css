@@ -1,0 +1,40 @@
+:host {
+  --button-padding-inline: var(--social-links-spacing-150);
+  --button-padding-block: var(--social-links-spacing-150);
+  --button-background-color: var(--social-links-color-gray-700);
+  --button-text-color: var(--social-links-color-white);
+  --button-background-hover-color: var(--social-links-color-yellow);
+  --button-text-hover-color: var(--social-links-color-gray-700);
+  --button-corner-radius: var(--social-links-spacing-100);
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: var(--button-padding-block) var(--button-padding-inline);
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border-radius: var(--button-corner-radius);
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--button-background-hover-color);
+      color: var(--button-text-hover-color);
+    }
+  }
+
+  .text-preset-2-bold {
+    font-family: 'Inter bold';
+    line-height: 150%;
+    letter-spacing: 0;
+    font-size: 14px;
+  }
+}
