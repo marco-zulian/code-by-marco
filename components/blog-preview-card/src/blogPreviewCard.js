@@ -8,7 +8,7 @@ class BlogPreviewCard extends HTMLElement {
 
   render() {
     this._shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="./style/blog-preview-card-style.css">
+      <link rel="stylesheet" href="../../styles/blog-preview-card/blog-preview-card-style.css">
       <div class="preview-card">
         <img class="preview-card__image" />
 
