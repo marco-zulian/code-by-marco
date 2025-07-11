@@ -15,16 +15,22 @@
       border-radius: 10px;
     }
 
-    .preview-card__creation-date {
-      color: var(--blog-preview-gray-950);
-    }
+    .preview-card__content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--blog-preview-spacing-150);
 
-    .preview-card__title {
-      color: var(--blog-preview-gray-950);
-    }
+      .preview-card__creation-date {
+        color: var(--blog-preview-gray-950);
+      }
 
-    .preview-card__subtitle {
-      color: var(--blog-preview-gray-500);
+      .preview-card__title {
+        color: var(--blog-preview-gray-950);
+      }
+
+      .preview-card__subtitle {
+        color: var(--blog-preview-gray-500);
+      }
     }
 
     .preview-card__author {

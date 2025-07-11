@@ -11,10 +11,14 @@ class BlogPreviewCard extends HTMLElement {
       <link rel="stylesheet" href="./style/blog-preview-card-style.css">
       <div class="preview-card">
         <img class="preview-card__image" />
-        <p class="preview-card__creation-date blog-preview-text-preset-3"></p>
-        <slot></slot>
-        <p class="preview-card__title blog-preview-text-preset-1"></p>
-        <p class="preview-card__subtitle blog-preview-text-preset-2"></p>
+
+        <div class="preview-card__content">
+          <slot></slot>
+          <p class="preview-card__creation-date blog-preview-text-preset-3"></p>
+          <p class="preview-card__title blog-preview-text-preset-1"></p>
+          <p class="preview-card__subtitle blog-preview-text-preset-2"></p>
+        </div>
+
         <div class="preview-card__author">
           <img class="preview-card__author--image" />
           <p class="preview-card__author--name blog-preview-text-preset-4"></p>
