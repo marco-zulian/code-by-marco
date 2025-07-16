@@ -1,0 +1,52 @@
+:host {
+  --button-padding-inline: var(--product-preview-spacing-400);
+  --button-padding-block: var(--product-preview-spacing-200);
+  --button-background-color: var(--product-preview-green-500);
+  --button-text-color: var(--product-preview-white);
+  --button-background-hover-color: var(--product-preview-green-700);
+  --button-text-hover-color: var(--product-preview-white);
+  --button-corner-radius: var(--product-preview-spacing-100);
+  --button-items-gap: var(--product-preview-spacing-100);
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .product-preview-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 100%;
+    gap: var(--button-items-gap);
+    padding: var(--button-padding-block) var(--button-padding-inline);
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border-radius: var(--button-corner-radius);
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--button-background-hover-color);
+      color: var(--button-text-hover-color);
+    }
+  }
+
+  .type-preset-2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  .product-preview-button__content {
+    display: flex;
+    align-items: center;
+    gap: var(--button-items-gap);
+  }
+}
