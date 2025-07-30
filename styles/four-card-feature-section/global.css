@@ -1,0 +1,148 @@
+:root {
+  --color-grey-500: #4d4f62;
+  --color-grey-400: #6a7178;
+  --color-white: #ffffff;
+  --color-red: #ea5454;
+  --color-cyan: #44d3d2;
+  --color-blue: #549ef2;
+  --color-orange: #fcae4a;
+
+  --spacing-500: 2.5rem;
+  --spacing-400: 2rem;
+  --spacing-300: 1.5rem;
+  --spacing-200: 1rem;
+  --spacing-100: 0.5rem;
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .team-builder__card {
+    --card-border-color: var(--color-red);
+  }
+
+  .karma__card {
+    --card-border-color: var(--color-orange);
+  }
+
+  .calculator__card {
+    --card-border-color: var(--color-blue);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    align-items: center;
+    justify-content: center;
+    padding-block: 80px;
+    min-height: 100vh;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .texts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-400);
+      text-align: center;
+      max-width: 540px;
+      color: var(--color-grey-500);
+
+      .texts__title {
+        font-size: clamp(1.5rem, 5vw, 2.25rem);
+      }
+    }
+
+    .cards, .middle-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-400);
+    }
+
+    cbm-card {
+      justify-self: center;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    main {
+      padding-block: 102px 163px;
+
+      .middle-cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    main {
+      .cards {
+        grid-auto-flow: column;
+        grid-template-rows: 1fr;
+        align-items: center;
+      }
+
+      .middle-cards {
+        grid-auto-flow: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+    }
+  }
+}
+
+.text-preset-1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+}
+
+.text-preset-2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+}
+
+.text-preset-3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.text-preset-4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.text-preset-5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
