@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+.bg-color-purple-50 {
+  background-color: hsl(260, 100%, 95%);
+}
+
+.font-color-purple-50 {
+  color: hsl(260, 100%, 95%);
+}
+
+.bg-color-purple-300 {
+  background-color: hsl(264, 82%, 80%);
+}
+
+.font-color-purple-300 {
+  color: hsl(264, 82%, 80%);
+}
+
+.bg-color-purple-500 {
+  background-color: hsl(263, 55%, 52%);
+}
+
+.font-color-purple-500 {
+  color: hsl(263, 55%, 52%);
+}
+
+.bg-color-white {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.font-color-white {
+  color: hsl(0, 0%, 100%);
+}
+
+.bg-color-grey-100 {
+  background-color: hsl(214, 17%, 92%);
+}
+
+.font-color-grey-100 {
+  color: hsl(214, 17%, 92%);
+}
+
+.bg-color-grey-200 {
+  background-color: hsl(0, 0%, 81%);
+}
+
+.font-color-grey-200 {
+  color: hsl(0, 0%, 81%);
+}
+
+.bg-color-grey-400 {
+  background-color: hsl(224, 10%, 45%);
+}
+
+.font-color-grey-400 {
+  color: hsl(224, 10%, 45%);
+}
+
+.bg-color-grey-500 {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.font-color-grey-500 {
+  color: hsl(217, 19%, 35%);
+}
+
+.bg-color-dark-blue {
+  background-color: hsl(219, 29%, 14%);
+}
+
+.font-color-dark-blue {
+  color: hsl(219, 29%, 14%);
+}
+
+.bg-color-black {
+  background-color: hsl(0, 0%, 7%);
+}
+
+.font-color-black {
+  color: hsl(0, 0%, 7%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.type-preset-1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.2;
+  font-size: 20px;
+}
+
+.type-preset-2 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.1;
+  font-size: 13px;
+}
+
+.type-preset-3 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-size: 13px;
+}
+
+.type-preset-4 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.1;
+  font-size: 11px;
+}
+
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #f6f5f6;
+  padding-block: 73px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 40px 60px 50px rgba(72, 85, 106, 0.244);
+}
+.testimonial-card__sender {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.testimonial-card__sender--image {
+  width: 28px;
+  height: 28px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.testimonial-card__section {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 305px;
+  justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial-card__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 647px;
+  }
+  .testimonial-card__section .testimonial-card {
+    height: 100%;
+  }
+  .testimonial-card__section .card__first, .testimonial-card__section .card__fourth, .testimonial-card__section .card__fifth {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main {
+    padding-block: 229px 218px;
+  }
+  .testimonial-card__section {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 1114px;
+  }
+  .testimonial-card__section .card__first {
+    grid-column: 1/span 2;
+    grid-row: 1/span 1;
+  }
+  .testimonial-card__section .card__third {
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+  }
+  .testimonial-card__section .card__fourth {
+    grid-column: 2/span 2;
+    grid-row: 2/span 1;
+  }
+  .testimonial-card__section .card__fifth {
+    grid-column: 4/span 1;
+    grid-row: 1/span 2;
+  }
+}
+
+/*# sourceMappingURL=global.css.map */

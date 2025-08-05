@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+$color-purple-50: hsl(260, 100%, 95%);
+$color-purple-300: hsl(264, 82%, 80%);
+$color-purple-500: hsl(263, 55%, 52%);
+$color-white: hsl(0, 0%, 100%);
+$color-grey-100: hsl(214, 17%, 92%);
+$color-grey-200: hsl(0, 0%, 81%);
+$color-grey-400: hsl(224, 10%, 45%);
+$color-grey-500: hsl(217, 19%, 35%);
+$color-dark-blue: hsl(219, 29%, 14%);
+$color-black: hsl(0, 0%, 7%);
+
+$colors: (
+  "purple-50": hsl(260, 100%, 95%),
+  "purple-300": hsl(264, 82%, 80%),
+  "purple-500": hsl(263, 55%, 52%),
+  "white": hsl(0, 0%, 100%),
+  "grey-100": hsl(214, 17%, 92%),
+  "grey-200": hsl(0, 0%, 81%),
+  "grey-400": hsl(224, 10%, 45%),
+  "grey-500": hsl(217, 19%, 35%),
+  "dark-blue": hsl(219, 29%, 14%),
+  "black": hsl(0, 0%, 7%)
+);
+
+@each $name, $value in $colors {
+  .bg-color-#{$name} {
+    background-color: $value;
+  }
+
+  .font-color-#{$name} {
+    color: $value;
+  }
+}
+
+
+$spacing-500: 2.5rem;
+$spacing-400: 2rem;
+$spacing-300: 1.5rem;
+$spacing-200: 1rem;
+$spacing-100: 0.5rem;
+$spacing-50: 0.25rem;
+
+$font-size-lg: 20px;
+$font-size-md: 13px;
+$font-size-sm: 11px;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.type-preset-1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.2;
+  font-size: $font-size-lg;
+}
+
+.type-preset-2 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.1;
+  font-size: $font-size-md;
+}
+
+.type-preset-3 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-size: $font-size-md;
+}
+
+.type-preset-4 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.1;
+  font-size: $font-size-sm;
+}
+
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #f6f5f6;
+  padding-block: 73px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-200;
+  padding: $spacing-400;
+  border-radius: $spacing-100;
+  box-shadow: 40px 60px 50px rgba(72, 85, 106, 0.244);
+
+  &__sender {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-200;
+
+    &--image {
+      width: 28px;
+      height: 28px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+  }
+
+  &__section {
+    display: flex;
+    gap: $spacing-400;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 305px;
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial-card__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-400;
+    max-width: 647px;
+
+    .testimonial-card {
+      height: 100%;
+    }
+
+    .card__first, .card__fourth, .card__fifth {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    padding-block: 229px 218px;
+  }
+
+  .testimonial-card__section {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 1114px;
+
+    .card__first {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1;
+    }
+
+    .card__third {
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+    }
+
+    .card__fourth {
+      grid-column: 2 / span 2;
+      grid-row: 2 / span 1;
+    }
+
+    .card__fifth {
+      grid-column: 4 / span 1;
+      grid-row: 1 / span 2;
+    }
+  }
+}
