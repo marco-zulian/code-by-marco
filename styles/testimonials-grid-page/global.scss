@@ -91,6 +91,7 @@ $font-size-sm: 11px;
 }
 
 main {
+  display: grid;
   min-width: 100vw;
   min-height: 100vh;
   background-color: #f6f5f6;
