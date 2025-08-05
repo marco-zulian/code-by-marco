@@ -105,10 +105,20 @@ main {
   border-radius: $spacing-100;
   box-shadow: 40px 60px 50px rgba(72, 85, 106, 0.244);
 
+  &__quote-image {
+    display: none;
+    z-index: 1;
+  }
+
+  &__testimonial--highlight, &__testimonial--quote {
+    z-index: 2;
+  }
+
   &__sender {
     display: flex;
     flex-direction: row;
     gap: $spacing-200;
+    z-index: 2;
 
     &--image {
       width: 28px;
@@ -138,6 +148,16 @@ main {
 
     .testimonial-card {
       height: 100%;
+      position: relative;
+
+      &__quote-image {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 164px;
+        width: 102px;
+        height: 104px;
+      }
     }
 
     .card__first, .card__fourth, .card__fifth {
@@ -175,6 +195,10 @@ main {
     .card__fifth {
       grid-column: 4 / span 1;
       grid-row: 1 / span 2;
+    }
+
+    .testimonial-card__quote-image {
+      right: 60px;
     }
   }
 }
