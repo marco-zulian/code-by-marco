@@ -27,8 +27,10 @@ $spacing-1400: 7rem;
 
 $colors: (
   "cyan-300": #8FE3F9,
+  "cyan-400": #71C0D4,
   "cyan-600": #4D96A9,
   "purple-300": #D9B8FF,
+  "purple-400": #B18BDD,
   "purple-600": #855FB1,
   "slate-300": #D1D1DF,
   "slate-600": #87879D,
@@ -42,6 +44,10 @@ $colors: (
   }
 
   .bg-color-#{$name} {
+    background-color: $value;
+  }
+
+  .bg-color-hover-#{$name}:hover {
     background-color: $value;
   }
 }
@@ -156,6 +162,7 @@ header {
   border: none;
   border-radius: 50px;
   align-self: center;
+  transition: background-color 0.3s ease;
 }
 
 main {
@@ -251,7 +258,7 @@ footer {
   &__marker {
     height: 80px;
     width: 0;
-    border: 0.5px solid $color-slate-300;
+    border: 0.25px solid $color-slate-300;
   }
 
   &__value {
@@ -324,6 +331,10 @@ footer {
 
   main {
     padding: $spacing-700 $spacing-1000 $spacing-900 $spacing-1000;
+
+    .main-section__images {
+      gap: $spacing-400;
+    }
   }
 
   footer {

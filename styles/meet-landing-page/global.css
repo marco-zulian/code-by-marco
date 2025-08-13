@@ -7,11 +7,31 @@
   background-color: #8FE3F9;
 }
 
+.bg-color-hover-cyan-300:hover {
+  background-color: #8FE3F9;
+}
+
+.font-color-cyan-400 {
+  color: #71C0D4;
+}
+
+.bg-color-cyan-400 {
+  background-color: #71C0D4;
+}
+
+.bg-color-hover-cyan-400:hover {
+  background-color: #71C0D4;
+}
+
 .font-color-cyan-600 {
   color: #4D96A9;
 }
 
 .bg-color-cyan-600 {
+  background-color: #4D96A9;
+}
+
+.bg-color-hover-cyan-600:hover {
   background-color: #4D96A9;
 }
 
@@ -23,11 +43,31 @@
   background-color: #D9B8FF;
 }
 
+.bg-color-hover-purple-300:hover {
+  background-color: #D9B8FF;
+}
+
+.font-color-purple-400 {
+  color: #B18BDD;
+}
+
+.bg-color-purple-400 {
+  background-color: #B18BDD;
+}
+
+.bg-color-hover-purple-400:hover {
+  background-color: #B18BDD;
+}
+
 .font-color-purple-600 {
   color: #855FB1;
 }
 
 .bg-color-purple-600 {
+  background-color: #855FB1;
+}
+
+.bg-color-hover-purple-600:hover {
   background-color: #855FB1;
 }
 
@@ -39,11 +79,19 @@
   background-color: #D1D1DF;
 }
 
+.bg-color-hover-slate-300:hover {
+  background-color: #D1D1DF;
+}
+
 .font-color-slate-600 {
   color: #87879D;
 }
 
 .bg-color-slate-600 {
+  background-color: #87879D;
+}
+
+.bg-color-hover-slate-600:hover {
   background-color: #87879D;
 }
 
@@ -55,11 +103,19 @@
   background-color: #28283D;
 }
 
+.bg-color-hover-slate-900:hover {
+  background-color: #28283D;
+}
+
 .font-color-white {
   color: #FAFAFA;
 }
 
 .bg-color-white {
+  background-color: #FAFAFA;
+}
+
+.bg-color-hover-white:hover {
   background-color: #FAFAFA;
 }
 
@@ -166,6 +222,7 @@ header .hero-section__content .hero-section__buttons {
   border: none;
   border-radius: 50px;
   align-self: center;
+  transition: background-color 0.3s ease;
 }
 
 main {
@@ -251,7 +308,7 @@ footer .footer-content .footer__section-content {
 .section-counter__marker {
   height: 80px;
   width: 0;
-  border: 0.5px solid #D1D1DF;
+  border: 0.25px solid #D1D1DF;
 }
 .section-counter__value {
   width: 3.5rem;
@@ -307,6 +364,9 @@ footer .footer-content .footer__section-content {
   }
   main {
     padding: 3.5rem 5rem 4.5rem 5rem;
+  }
+  main .main-section__images {
+    gap: 2rem;
   }
   footer {
     padding: 7rem 5rem;
