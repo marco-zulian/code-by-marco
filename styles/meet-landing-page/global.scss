@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+$color-cyan-300: #8FE3F9;
+$color-cyan-600: #4D96A9;
+$color-purple-300: #D9B8FF;
+$color-purple-600: #855FB1;
+$color-slate-300: #D1D1DF;
+$color-slate-600: #87879D;
+$color-slate-900: #28283D;
+$color-white: #FAFAFA;
+
+$spacing-50: 0.25rem;
+$spacing-100: 0.5rem;
+$spacing-200: 1rem;
+$spacing-300: 1.5rem;
+$spacing-350: 1.75rem;
+$spacing-400: 2rem;
+$spacing-450: 2.25rem;
+$spacing-500: 2.5rem;
+$spacing-600: 3rem;
+$spacing-700: 3.5rem;
+$spacing-800: 4rem;
+$spacing-900: 4.5rem;
+$spacing-1000: 5rem;
+$spacing-1200: 6rem;
+$spacing-1400: 7rem;
+
+$colors: (
+  "cyan-300": #8FE3F9,
+  "cyan-600": #4D96A9,
+  "purple-300": #D9B8FF,
+  "purple-600": #855FB1,
+  "slate-300": #D1D1DF,
+  "slate-600": #87879D,
+  "slate-900": #28283D,
+  "white": #FAFAFA
+);
+
+@each $name, $value in $colors {
+  .font-color-#{$name} {
+    color: $value;
+  }
+
+  .bg-color-#{$name} {
+    background-color: $value;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p, h1, h2 {
+  text-align: center;
+}
+
+.type-preset-1 {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  line-height: 1.1;
+  font-style: normal;
+  font-size: clamp(2.5rem, 6.25vw, 4rem);
+}
+
+.type-preset-2 {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  line-height: 1.1;
+  font-style: normal;
+  font-size: clamp(2rem, 4.69vw, 2.5rem);
+}
+
+.type-preset-3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 4px;
+  font-style: normal;
+  font-size: clamp(0.75rem, 1.82vw, 1rem);
+}
+
+.type-preset-4 {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  line-height: 1.5;
+  font-weight: 300;
+  font-style: normal;
+  font-size: clamp(1rem, 0.2vw, 1.125rem);
+}
+
+.type-preset-5 {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  line-height: 1.5;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+body {
+  background-color: $color-white;
+}
+
+header {
+  .navigation-header {
+    height: 76px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+
+  .hero-section {
+    padding: $spacing-800 $spacing-400 $spacing-400 $spacing-400;
+    display: flex;
+    gap: $spacing-600;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    &__image {
+      height: clamp(160px, 40vw, 303px);
+    
+      &--left, &--right {
+        display: none;
+      }
+    }
+
+    &__content {
+      max-width: 449px;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-300;
+      align-items: center;
+
+      .hero-section__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-200;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.custom-button {
+  display: flex;
+  padding: $spacing-200 $spacing-500;
+  border: none;
+  border-radius: 50px;
+  align-self: center;
+}
+
+main {
+  padding: $spacing-400 $spacing-400 $spacing-450 $spacing-400;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-800;
+
+  .main-section__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-200;
+    width: 100%;
+    max-width: 1120px;
+    align-self: center;
+
+    img {
+      border-radius: $spacing-100;
+      width: 100%;
+    }
+  }
+
+  .main-section__texts {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-400;
+    max-width: 31.5rem;
+    align-self: center;
+
+    &--header {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-200;
+      align-content: center;
+    }
+  }
+}
+
+.footer__section-counter {
+  z-index: 3;
+  position: relative;
+  top: $spacing-350;
+}
+
+footer {
+  position: relative;
+  padding-inline: $spacing-400;
+
+  picture::before {
+    z-index: 2;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(77, 150, 168, 0.9);
+  }
+
+  .footer__background-image {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    align-self: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-300;
+    padding-block: $spacing-800;
+    max-width: 31.5rem;
+    justify-self: center;
+
+    .footer {
+      &__section-content {
+        z-index: 3;
+      }
+    }
+  }
+}
+
+.section-counter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__marker {
+    height: 80px;
+    width: 0;
+    border: 0.5px solid $color-slate-300;
+  }
+
+  &__value {
+    width: $spacing-700;
+    height: $spacing-700;
+    border-radius: 50%;
+    border: 1px solid $color-slate-300;
+    text-align: center;
+    align-content: center;
+    background-color: $color-white;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    .navigation-header {
+      height: 108px;
+    }
+
+    .hero-section {
+      margin-block: $spacing-800;
+      padding: $spacing-800 $spacing-400;
+
+      &__content {
+        .hero-section__buttons {
+          justify-content: center;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  main {
+    padding: $spacing-700 $spacing-400 $spacing-800 $spacing-400;
+
+    .main-section__images {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    .hero-section { 
+      flex-direction: row;
+
+      &__image {
+        display: none;  
+        
+        &--right {
+          display: block;
+          transform: translate($spacing-1200, $spacing-700);
+        }
+
+        &--left {
+          display: block;
+          transform: translate(-$spacing-1200, -$spacing-700);
+        }
+      }
+    }
+  }
+
+  main {
+    padding: $spacing-700 $spacing-1000 $spacing-900 $spacing-1000;
+  }
+}
