@@ -107,7 +107,7 @@ p, h1, h2 {
   line-height: 1.5;
   font-weight: 300;
   font-style: normal;
-  font-size: clamp(1rem, 0.2vw, 1.125rem);
+  font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
 .type-preset-5 {
@@ -307,6 +307,23 @@ footer .footer-content .footer__section-content {
   }
   main {
     padding: 3.5rem 5rem 4.5rem 5rem;
+  }
+  footer {
+    padding: 7rem 5rem;
+  }
+  footer .footer-content {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 445px 355px 256px;
+    justify-content: center;
+    align-self: center;
+  }
+  footer .footer-content h2, footer .footer-content p {
+    text-align: start;
+  }
+  footer .footer-content button {
+    align-self: flex-start;
+    justify-self: flex-end;
   }
 }
 

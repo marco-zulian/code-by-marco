@@ -90,7 +90,7 @@ p, h1, h2 {
   line-height: 1.5;
   font-weight: 300;
   font-style: normal;
-  font-size: clamp(1rem, 0.2vw, 1.125rem);
+  font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
 .type-preset-5 {
@@ -324,5 +324,26 @@ footer {
 
   main {
     padding: $spacing-700 $spacing-1000 $spacing-900 $spacing-1000;
+  }
+
+  footer {
+    padding: $spacing-1400 $spacing-1000;
+
+    .footer-content {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 445px 355px 256px;
+      justify-content: center;
+      align-self: center;
+
+      h2, p {
+        text-align: start;
+      }
+
+      button {
+        align-self: flex-start;
+        justify-self: flex-end;
+      }
+    }
   }
 }
