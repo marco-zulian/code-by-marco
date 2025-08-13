@@ -272,7 +272,6 @@ footer {
     }
 
     .hero-section {
-      margin-block: $spacing-800;
       padding: $spacing-800 $spacing-400;
 
       &__content {
@@ -295,20 +294,29 @@ footer {
 
 @media screen and (min-width: 1440px) {
   header {
-    .hero-section { 
+    .hero-section {
+      padding-block: 0;
+      margin-block: $spacing-800; 
       flex-direction: row;
+      box-sizing: content-box;
+      min-height: 360px;
+      position: relative;
 
       &__image {
-        display: none;  
+        display: none;
         
         &--right {
           display: block;
-          transform: translate($spacing-1200, $spacing-700);
+          position: absolute;
+          bottom: 0;
+          right: -26px; 
         }
 
         &--left {
           display: block;
-          transform: translate(-$spacing-1200, -$spacing-700);
+          position: absolute;
+          top: 0;
+          left: -26px;
         }
       }
     }
