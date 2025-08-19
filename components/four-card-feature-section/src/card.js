@@ -6,7 +6,7 @@ class Card extends HTMLElement {
 
   render() {
     this._shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="../../styles/four-card-feature-section/card.css">
+      <link rel="stylesheet" href="./styles/card.css">
       <div class="card">
         <div class="card__text">
           <p class="card__text--title text-preset-3">${this.getAttribute('title') || ''}</p>

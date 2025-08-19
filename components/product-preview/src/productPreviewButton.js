@@ -8,7 +8,7 @@ class Button extends HTMLElement {
 
   render() {
     this._shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="../../styles/product-preview/product-preview-button.css">
+      <link rel="stylesheet" href="./styles/product-preview-button.css">
       <button class="product-preview-button">
         <p class="type-preset-2 product-preview-button__content"><slot></slot></p>
       </button>

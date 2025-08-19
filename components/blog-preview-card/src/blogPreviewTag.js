@@ -7,7 +7,7 @@ class BlogPreviewTag extends HTMLElement {
 
   render() {
     this._shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="../../styles/blog-preview-card/blog-preview-tag-style.css">
+      <link rel="stylesheet" href="./styles/blog-preview-tag-style.css">
       <div class="preview-tag">
         <p class="preview-tag__name blog-preview-text-preset-4">
           <slot></slot>

@@ -8,7 +8,7 @@ class LinkButton extends HTMLElement {
 
   render() {
     this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="../../styles/social-links-profile/social-links-profile-button.css">
+      <link rel="stylesheet" href="./styles/social-links-profile-button.css">
       <a class="link-button text-preset-2-bold"><slot class="link-button__content"></slot></a>
     `;
   }

@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Young Serif';
-  src: url('../../assets/recipe-page/fonts/young-serif/YoungSerif-Regular.ttf');
+  src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf');
 }
 
 @font-face {
   font-family: 'Outfit';
-  src: url('../../assets/recipe-page/fonts/outfit/Outfit-VariableFont_wght.ttf');
+  src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
 }
 
 :root {

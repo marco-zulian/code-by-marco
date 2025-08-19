@@ -6,7 +6,7 @@ class SocialLinksProfile extends HTMLElement {
 
   render() {
     this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="../../styles/social-links-profile/social-links-profile.css">
+      <link rel="stylesheet" href="./styles/social-links-profile.css">
       <div class="social-links">
         <img class="social-links__avatar" src=${this.getAttribute('src') || ''} alt=${this.getAttribute('alt') || ''}></img>
         <div class="social-links__info">

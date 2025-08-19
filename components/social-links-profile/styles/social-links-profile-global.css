@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Inter bold';
-  src: url(../../assets/social-links-profile/fonts/static/Inter-Bold.ttf);
+  src: url(../assets/fonts/static/Inter-Bold.ttf);
 }
 
 @font-face {
   font-family: 'Inter regular';
-  src: url(../../assets/social-links-profile/fonts/static/Inter-Regular.ttf);
+  src: url(../assets/fonts/static/Inter-Regular.ttf);
 }
 
 :root {
