@@ -12,8 +12,8 @@ class ProfileAndDate extends HTMLElement {
       <div class="flex gap-4">
         <img class="rounded-full w-10" src="${this.getAttribute("src")}" alt="${this.getAttribute("alt")}">
         <div class="flex flex-col self-center">
-          <p class="font-manrope font-bold text-[13px]/[1.4] text-gray-900"><slot name="name"></slot></p>
-          <p class="font-manrope font-medium text-[13px]/[1.4] text-gray-400"><slot name="date"></slot></p>
+          <p class="font-manrope font-bold text-[13px]/[1.4] text-gray-900 tracking-[0.12%]"><slot name="name"></slot></p>
+          <p class="font-manrope font-medium text-[13px]/[1.4] text-gray-400 tracking-[0.12%]"><slot name="date"></slot></p>
         </div>
       </div>
     `
