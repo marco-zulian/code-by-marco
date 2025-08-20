@@ -501,11 +501,6 @@
       max-width: 730px;
     }
   }
-  .lg\:gap-10 {
-    @media (width >= 90rem) {
-      gap: calc(var(--spacing) * 10);
-    }
-  }
   .lg\:py-7\.5 {
     @media (width >= 90rem) {
       padding-block: calc(var(--spacing) * 7.5);
