@@ -22,7 +22,7 @@ class ArticlePreview extends HTMLElement {
         <div class="flex flex-col gap-12 md:gap-6 lg:gap-10 px-7.5 pb-4.5 md:py-10 md:pl-0 md:pr-9 lg:pr-10 lg:py-7.5 relative">
           <div class="flex flex-col gap-6">
             <h2 class="font-manrope font-bold text-gray-900 text-xl/[1.3] tracking-wide"><slot name="title"></slot></h2>
-            <p class="font-manrope font-medium text-gray-500 text-[13px]/[1.4]"><slot name="subtitle"></slot><p>
+            <p class="font-manrope font-medium text-gray-500 text-[13px]/[1.4]"><slot name="subtitle"></slot></p>
           </div>
 
           <div class="flex justify-between items-center">
