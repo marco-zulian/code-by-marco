@@ -13,7 +13,7 @@ class ArticlePreview extends HTMLElement {
 
   render() {
     this._shadowRoot.innerHTML = `
-      <div class="flex flex-col align-middle justify-center md:flex-row gap-8 bg-white rounded-md">
+      <div class="flex flex-col align-middle justify-center md:flex-row gap-8 lg:gap-10 bg-white rounded-md">
         <img
           class="w-full md:w-[229px] lg:w-[285px] object-fill rounded-t-md md:rounded-l-md md:rounded-tr-none"
           src=${this.getAttribute("src")}
