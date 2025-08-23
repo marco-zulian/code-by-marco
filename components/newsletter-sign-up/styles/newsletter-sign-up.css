@@ -1,0 +1,21 @@
+@import url(../assets/fonts/Roboto-Bold.ttf);
+@import url(../assets/fonts/Roboto-Regular.ttf);
+
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: 'Roboto', sans-serif;
+
+  --color-white: #ffffff;
+  --color-grey: #949494;
+  --color-blue-800: #242742;
+  --color-blue-700: #36384d;
+  --color-red: #ff6155;
+
+  --radius-lg: 2.25rem;
+  --radius-md: 1rem;
+  --radius-sm: 0.5rem;
+
+  --breakpoint-md: 38rem;
+  --breakpoint-lg: 90rem;
+}
