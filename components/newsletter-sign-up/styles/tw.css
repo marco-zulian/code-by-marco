@@ -1,7 +1,17 @@
 /*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
-@import url(../assets/fonts/Roboto-Bold.ttf);
-@import url(../assets/fonts/Roboto-Regular.ttf);
 @layer properties;
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -336,13 +346,6 @@
       content: var(--tw-content);
     }
   }
-  .before\:content-\[url\(\'\.\/assets\/images\/icon-list\.svg\'\)\] {
-    &::before {
-      content: var(--tw-content);
-      --tw-content: url('./assets/images/icon-list.svg');
-      content: var(--tw-content);
-    }
-  }
   .placeholder-shown\:border-grey {
     &:placeholder-shown {
       border-color: var(--color-grey);
@@ -481,9 +484,14 @@
       gap: calc(var(--spacing) * 16);
     }
   }
-  .lg\:p-8 {
+  .lg\:px-8 {
     @media (width >= 90rem) {
-      padding: calc(var(--spacing) * 8);
+      padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+  .lg\:py-6 {
+    @media (width >= 90rem) {
+      padding-block: calc(var(--spacing) * 6);
     }
   }
   .\[\.submitted\]\:user-invalid\:border-red {
