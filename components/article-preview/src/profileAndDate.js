@@ -1,9 +1,9 @@
-import sheet from '../styles/tw.css' with { type: 'css' }
+import sheet from "../styles/tw.css" with { type: "css" };
 
 class ProfileAndDate extends HTMLElement {
   constructor() {
-    super()
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    super();
+    this._shadowRoot = this.attachShadow({ mode: "open" });
     this.render();
   }
 
@@ -16,9 +16,9 @@ class ProfileAndDate extends HTMLElement {
           <p class="font-manrope font-medium text-[13px]/[1.4] text-gray-400 tracking-[0.12%]"><slot name="date"></slot></p>
         </div>
       </div>
-    `
+    `;
     this._shadowRoot.adoptedStyleSheets = [sheet];
   }
 }
 
-customElements.define('cbm-profile-and-date', ProfileAndDate);
+customElements.define("cbm-profile-and-date", ProfileAndDate);

@@ -1,9 +1,9 @@
-import sheet from '../styles/tw.css' with { type: 'css' }
+import sheet from "../styles/tw.css" with { type: "css" };
 
 class ArticlePreview extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot = this.attachShadow({ mode: "open" });
     this.render();
   }
 
@@ -47,10 +47,10 @@ class ArticlePreview extends HTMLElement {
           </div>
         </div>
       </div>
-    `
+    `;
 
     this._shadowRoot.adoptedStyleSheets = [sheet];
   }
 }
 
-customElements.define('cbm-article-preview', ArticlePreview);
+customElements.define("cbm-article-preview", ArticlePreview);

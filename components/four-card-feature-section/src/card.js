@@ -1,7 +1,7 @@
 class Card extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot = this.attachShadow({ mode: "open" });
   }
 
   render() {
@@ -9,8 +9,8 @@ class Card extends HTMLElement {
       <link rel="stylesheet" href="./styles/card.css">
       <div class="card">
         <div class="card__text">
-          <p class="card__text--title text-preset-3">${this.getAttribute('title') || ''}</p>
-          <p class="card__text--description text-preset-5">${this.getAttribute('description') || ''}</p>
+          <p class="card__text--title text-preset-3">${this.getAttribute("title") || ""}</p>
+          <p class="card__text--description text-preset-5">${this.getAttribute("description") || ""}</p>
         </div>
         <img class="card__image"/>
       </div>
@@ -22,9 +22,9 @@ class Card extends HTMLElement {
   connectedCallback() {
     this.render();
   }
-  
+
   static get observedAttributes() {
-    return ['title', 'description', 'src', 'alt'];
+    return ["title", "description", "src", "alt"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -32,16 +32,16 @@ class Card extends HTMLElement {
   }
 
   configureImage() {
-    const image = this.shadowRoot.querySelector('.card__image');
-    const src = this.getAttribute('src') || '';
+    const image = this.shadowRoot.querySelector(".card__image");
+    const src = this.getAttribute("src") || "";
 
-    if (src === '') {
-      image.style.visibility = 'hidden';
+    if (src === "") {
+      image.style.visibility = "hidden";
     } else {
-      image.setAttribute('src', src);
-      image.setAttribute('alt', this.getAttribute('alt') || '');
+      image.setAttribute("src", src);
+      image.setAttribute("alt", this.getAttribute("alt") || "");
     }
   }
 }
 
-customElements.define('cbm-card', Card);
+customElements.define("cbm-card", Card);

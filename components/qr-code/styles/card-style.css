@@ -5,9 +5,10 @@
   gap: var(--spacing-300);
   background-color: var(--white);
   border-radius: 1.25rem;
-  padding: var(--spacing-100) var(--spacing-100) var(--spacing-500) var(--spacing-100);
+  padding: var(--spacing-100) var(--spacing-100) var(--spacing-500)
+    var(--spacing-100);
   max-width: 20rem;
-  box-shadow: 0 25px 25px rgba(0,0,0,0.047);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.047);
 
   .qrcode__image {
     width: 100%;
@@ -27,7 +28,7 @@
     }
 
     .qrcode__text--subtitle {
-      color: var(--slate-500)
+      color: var(--slate-500);
     }
   }
 }

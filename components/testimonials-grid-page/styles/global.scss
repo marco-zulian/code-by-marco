@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
 
 $color-purple-50: hsl(260, 100%, 95%);
 $color-purple-300: hsl(264, 82%, 80%);
@@ -21,7 +21,7 @@ $colors: (
   "grey-400": hsl(224, 10%, 45%),
   "grey-500": hsl(217, 19%, 35%),
   "dark-blue": hsl(219, 29%, 14%),
-  "black": hsl(0, 0%, 7%)
+  "black": hsl(0, 0%, 7%),
 );
 
 @each $name, $value in $colors {
@@ -33,7 +33,6 @@ $colors: (
     color: $value;
   }
 }
-
 
 $spacing-500: 2.5rem;
 $spacing-400: 2rem;
@@ -109,7 +108,8 @@ main {
     z-index: 1;
   }
 
-  &__testimonial--highlight, &__testimonial--quote {
+  &__testimonial--highlight,
+  &__testimonial--quote {
     z-index: 2;
   }
 
@@ -159,7 +159,9 @@ main {
       }
     }
 
-    .card__first, .card__fourth, .card__fifth {
+    .card__first,
+    .card__fourth,
+    .card__fifth {
       grid-column-start: 1;
       grid-column-end: 3;
     }

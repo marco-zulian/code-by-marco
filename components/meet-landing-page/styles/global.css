@@ -1,122 +1,122 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 .font-color-cyan-300 {
-  color: #8FE3F9;
+  color: #8fe3f9;
 }
 
 .bg-color-cyan-300 {
-  background-color: #8FE3F9;
+  background-color: #8fe3f9;
 }
 
 .bg-color-hover-cyan-300:hover {
-  background-color: #8FE3F9;
+  background-color: #8fe3f9;
 }
 
 .font-color-cyan-400 {
-  color: #71C0D4;
+  color: #71c0d4;
 }
 
 .bg-color-cyan-400 {
-  background-color: #71C0D4;
+  background-color: #71c0d4;
 }
 
 .bg-color-hover-cyan-400:hover {
-  background-color: #71C0D4;
+  background-color: #71c0d4;
 }
 
 .font-color-cyan-600 {
-  color: #4D96A9;
+  color: #4d96a9;
 }
 
 .bg-color-cyan-600 {
-  background-color: #4D96A9;
+  background-color: #4d96a9;
 }
 
 .bg-color-hover-cyan-600:hover {
-  background-color: #4D96A9;
+  background-color: #4d96a9;
 }
 
 .font-color-purple-300 {
-  color: #D9B8FF;
+  color: #d9b8ff;
 }
 
 .bg-color-purple-300 {
-  background-color: #D9B8FF;
+  background-color: #d9b8ff;
 }
 
 .bg-color-hover-purple-300:hover {
-  background-color: #D9B8FF;
+  background-color: #d9b8ff;
 }
 
 .font-color-purple-400 {
-  color: #B18BDD;
+  color: #b18bdd;
 }
 
 .bg-color-purple-400 {
-  background-color: #B18BDD;
+  background-color: #b18bdd;
 }
 
 .bg-color-hover-purple-400:hover {
-  background-color: #B18BDD;
+  background-color: #b18bdd;
 }
 
 .font-color-purple-600 {
-  color: #855FB1;
+  color: #855fb1;
 }
 
 .bg-color-purple-600 {
-  background-color: #855FB1;
+  background-color: #855fb1;
 }
 
 .bg-color-hover-purple-600:hover {
-  background-color: #855FB1;
+  background-color: #855fb1;
 }
 
 .font-color-slate-300 {
-  color: #D1D1DF;
+  color: #d1d1df;
 }
 
 .bg-color-slate-300 {
-  background-color: #D1D1DF;
+  background-color: #d1d1df;
 }
 
 .bg-color-hover-slate-300:hover {
-  background-color: #D1D1DF;
+  background-color: #d1d1df;
 }
 
 .font-color-slate-600 {
-  color: #87879D;
+  color: #87879d;
 }
 
 .bg-color-slate-600 {
-  background-color: #87879D;
+  background-color: #87879d;
 }
 
 .bg-color-hover-slate-600:hover {
-  background-color: #87879D;
+  background-color: #87879d;
 }
 
 .font-color-slate-900 {
-  color: #28283D;
+  color: #28283d;
 }
 
 .bg-color-slate-900 {
-  background-color: #28283D;
+  background-color: #28283d;
 }
 
 .bg-color-hover-slate-900:hover {
-  background-color: #28283D;
+  background-color: #28283d;
 }
 
 .font-color-white {
-  color: #FAFAFA;
+  color: #fafafa;
 }
 
 .bg-color-white {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .bg-color-hover-white:hover {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 * {
@@ -125,7 +125,9 @@
   box-sizing: border-box;
 }
 
-p, h1, h2 {
+p,
+h1,
+h2 {
   text-align: center;
 }
 
@@ -176,7 +178,7 @@ p, h1, h2 {
 }
 
 body {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 header .navigation-header {
@@ -197,7 +199,8 @@ header .hero-section {
 header .hero-section__image {
   height: clamp(160px, 40vw, 303px);
 }
-header .hero-section__image--left, header .hero-section__image--right {
+header .hero-section__image--left,
+header .hero-section__image--right {
   display: none;
 }
 header .hero-section__content {
@@ -308,16 +311,16 @@ footer .footer-content .footer__section-content {
 .section-counter__marker {
   height: 80px;
   width: 0;
-  border: 0.25px solid #D1D1DF;
+  border: 0.25px solid #d1d1df;
 }
 .section-counter__value {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  border: 1px solid #D1D1DF;
+  border: 1px solid #d1d1df;
   text-align: center;
   align-content: center;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 @media screen and (min-width: 768px) {
@@ -378,7 +381,8 @@ footer .footer-content .footer__section-content {
     justify-content: center;
     align-self: center;
   }
-  footer .footer-content h2, footer .footer-content p {
+  footer .footer-content h2,
+  footer .footer-content p {
     text-align: start;
   }
   footer .footer-content button {

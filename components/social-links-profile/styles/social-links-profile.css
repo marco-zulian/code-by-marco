@@ -21,7 +21,8 @@
     flex-direction: column;
     width: 327px;
     gap: var(--social-links-profile-sections-gap);
-    padding: var(--social-links-profile-padding-block) var(--social-links-profile-padding-inline);
+    padding: var(--social-links-profile-padding-block)
+      var(--social-links-profile-padding-inline);
     background-color: var(--social-links-profile-background-color);
     justify-content: center;
     border-radius: 12px;
@@ -54,26 +55,26 @@
     .social-links__links {
       display: flex;
       flex-direction: column;
-      gap: var(--social-links-profile-links-gap); 
+      gap: var(--social-links-profile-links-gap);
     }
   }
 
   .text-preset-1 {
-    font-family: 'Inter bold';
+    font-family: "Inter bold";
     line-height: 150%;
     letter-spacing: 0;
     font-size: 24px;
   }
 
   .text-preset-2 {
-    font-family: 'Inter regular';
+    font-family: "Inter regular";
     line-height: 150%;
     letter-spacing: 0;
     font-size: 14px;
   }
 
   .text-preset-2-bold {
-    font-family: 'Inter bold';
+    font-family: "Inter bold";
     line-height: 150%;
     letter-spacing: 0;
     font-size: 14px;
@@ -82,7 +83,8 @@
   @media only screen and (min-width: 1024px) {
     .social-links {
       width: 384px;
-      padding: var(--social-links-profile-padding-block-md) var(--social-links-profile-padding-inline-md);
-    } 
+      padding: var(--social-links-profile-padding-block-md)
+        var(--social-links-profile-padding-inline-md);
+    }
   }
 }

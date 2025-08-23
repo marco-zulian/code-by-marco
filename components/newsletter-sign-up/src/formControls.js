@@ -7,30 +7,30 @@ const successModalButton = document.querySelector("#success-modal-button");
 
 const validateForm = (e) => {
   e.preventDefault(e);
-  input.classList.add('submitted');
+  input.classList.add("submitted");
 
   if (e.target.checkValidity()) {
-    errorMessage.classList.add('hidden');
-    formContent.classList.add('hidden');
-    
-    confirmationEmail.innerHTML = input.value
-    successModal.classList.add('flex');
-    successModal.classList.remove('hidden');
+    errorMessage.classList.add("hidden");
+    formContent.classList.add("hidden");
+
+    confirmationEmail.innerHTML = input.value;
+    successModal.classList.add("flex");
+    successModal.classList.remove("hidden");
   } else {
-    errorMessage.classList.remove('hidden');
-    successModal.classList.add('hidden');    
+    errorMessage.classList.remove("hidden");
+    successModal.classList.add("hidden");
   }
-}
+};
 
 const closeModal = () => {
-  input.classList.remove('submitted');
-  input.value = '';
-  errorMessage.classList.add('hidden');
-  formContent.classList.remove('hidden');
+  input.classList.remove("submitted");
+  input.value = "";
+  errorMessage.classList.add("hidden");
+  formContent.classList.remove("hidden");
 
-  successModal.classList.add('hidden');
-  successModal.classList.remove('flex');
-}
+  successModal.classList.add("hidden");
+  successModal.classList.remove("flex");
+};
 
-document.querySelector('form').addEventListener('submit', validateForm);
-successModalButton.addEventListener('click', closeModal);
+document.querySelector("form").addEventListener("submit", validateForm);
+successModalButton.addEventListener("click", closeModal);

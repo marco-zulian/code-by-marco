@@ -1,8 +1,8 @@
 class Button extends HTMLElement {
   constructor() {
-    super()
+    super();
 
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot = this.attachShadow({ mode: "open" });
     this.render();
   }
 
@@ -12,7 +12,7 @@ class Button extends HTMLElement {
       <button class="product-preview-button">
         <p class="type-preset-2 product-preview-button__content"><slot></slot></p>
       </button>
-    `
+    `;
   }
 
   connectedCallback() {
@@ -20,7 +20,7 @@ class Button extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['icon-left'];
+    return ["icon-left"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -28,4 +28,4 @@ class Button extends HTMLElement {
   }
 }
 
-customElements.define('cbm-button', Button);
+customElements.define("cbm-button", Button);

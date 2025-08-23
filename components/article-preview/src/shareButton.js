@@ -1,13 +1,13 @@
-import sheet from '../styles/tw.css' with { type: 'css' }
+import sheet from "../styles/tw.css" with { type: "css" };
 
 class ShareButton extends HTMLElement {
   constructor() {
     super();
     this._shadowRoot = this.attachShadow({
-      mode: 'open'
+      mode: "open",
     });
 
-    this.active = this.getAttribute('active');
+    this.active = this.getAttribute("active");
     this.render();
 
     this._button = this._shadowRoot.querySelector(".share-button");
@@ -16,22 +16,25 @@ class ShareButton extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['active']
+    return ["active"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'active') {
+    if (name === "active") {
       this._button.classList = this._getButtonClasses();
-      this.active ? this._slot.classList.remove("hidden") : this._slot.classList.add("hidden");
+      this.active
+        ? this._slot.classList.remove("hidden")
+        : this._slot.classList.add("hidden");
     }
   }
 
   _getButtonClasses() {
     return `
         share-button relative flex justify-center items-center rounded-full size-8 cursor-pointer z-10
-        ${this.active ? 
-          "bg-gray-500 fill-white" : 
-          "fill-gray-500 bg-gray-200 hover:bg-gray-500 hover:fill-white"
+        ${
+          this.active
+            ? "bg-gray-500 fill-white"
+            : "fill-gray-500 bg-gray-200 hover:bg-gray-500 hover:fill-white"
         }`;
   }
 
@@ -49,13 +52,17 @@ class ShareButton extends HTMLElement {
       ></slot>
     `;
     this._shadowRoot.adoptedStyleSheets = [sheet];
-    this._shadowRoot.querySelector('.share-button').addEventListener('click', () => this.toggleActive());
+    this._shadowRoot
+      .querySelector(".share-button")
+      .addEventListener("click", () => this.toggleActive());
   }
 
   toggleActive() {
     this.active = !this.active;
-    this.active ? this.setAttribute('active', '') : this.removeAttribute('active');
+    this.active
+      ? this.setAttribute("active", "")
+      : this.removeAttribute("active");
   }
 }
 
-customElements.define('cbm-share-button', ShareButton);
+customElements.define("cbm-share-button", ShareButton);

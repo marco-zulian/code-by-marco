@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 
-$color-cyan-300: #8FE3F9;
-$color-cyan-600: #4D96A9;
-$color-purple-300: #D9B8FF;
-$color-purple-600: #855FB1;
-$color-slate-300: #D1D1DF;
-$color-slate-600: #87879D;
-$color-slate-900: #28283D;
-$color-white: #FAFAFA;
+$color-cyan-300: #8fe3f9;
+$color-cyan-600: #4d96a9;
+$color-purple-300: #d9b8ff;
+$color-purple-600: #855fb1;
+$color-slate-300: #d1d1df;
+$color-slate-600: #87879d;
+$color-slate-900: #28283d;
+$color-white: #fafafa;
 
 $spacing-50: 0.25rem;
 $spacing-100: 0.5rem;
@@ -26,16 +26,16 @@ $spacing-1200: 6rem;
 $spacing-1400: 7rem;
 
 $colors: (
-  "cyan-300": #8FE3F9,
-  "cyan-400": #71C0D4,
-  "cyan-600": #4D96A9,
-  "purple-300": #D9B8FF,
-  "purple-400": #B18BDD,
-  "purple-600": #855FB1,
-  "slate-300": #D1D1DF,
-  "slate-600": #87879D,
-  "slate-900": #28283D,
-  "white": #FAFAFA
+  "cyan-300": #8fe3f9,
+  "cyan-400": #71c0d4,
+  "cyan-600": #4d96a9,
+  "purple-300": #d9b8ff,
+  "purple-400": #b18bdd,
+  "purple-600": #855fb1,
+  "slate-300": #d1d1df,
+  "slate-600": #87879d,
+  "slate-900": #28283d,
+  "white": #fafafa,
 );
 
 @each $name, $value in $colors {
@@ -58,7 +58,9 @@ $colors: (
   box-sizing: border-box;
 }
 
-p, h1, h2 {
+p,
+h1,
+h2 {
   text-align: center;
 }
 
@@ -131,8 +133,9 @@ header {
 
     &__image {
       height: clamp(160px, 40vw, 303px);
-    
-      &--left, &--right {
+
+      &--left,
+      &--right {
         display: none;
       }
     }
@@ -303,7 +306,7 @@ footer {
   header {
     .hero-section {
       padding-block: 0;
-      margin-block: $spacing-800; 
+      margin-block: $spacing-800;
       flex-direction: row;
       box-sizing: content-box;
       min-height: 360px;
@@ -311,12 +314,12 @@ footer {
 
       &__image {
         display: none;
-        
+
         &--right {
           display: block;
           position: absolute;
           bottom: 0;
-          right: -26px; 
+          right: -26px;
         }
 
         &--left {
@@ -347,7 +350,8 @@ footer {
       justify-content: center;
       align-self: center;
 
-      h2, p {
+      h2,
+      p {
         text-align: start;
       }
 

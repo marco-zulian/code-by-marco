@@ -1,7 +1,7 @@
 class LinkButton extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot = this.attachShadow({ mode: "open" });
 
     this.render();
   }
@@ -18,13 +18,13 @@ class LinkButton extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['src'];
+    return ["src"];
   }
 
   updateSrc() {
-    const anchor = this.shadowRoot.querySelector('.link-button');
-    anchor.setAttribute("href", this.getAttribute('href') || '');
+    const anchor = this.shadowRoot.querySelector(".link-button");
+    anchor.setAttribute("href", this.getAttribute("href") || "");
   }
 }
 
-customElements.define('cbm-link-button', LinkButton);
+customElements.define("cbm-link-button", LinkButton);

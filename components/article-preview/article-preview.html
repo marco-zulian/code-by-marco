@@ -1,36 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles/tw.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/tw.css" />
 
-  <script type="module" src="src/shareButton.js"></script>
-  <script type="module" src="src/profileAndDate.js"></script>
-  <script type="module" src="src/articlePreview.js"></script>
+    <script type="module" src="src/shareButton.js"></script>
+    <script type="module" src="src/profileAndDate.js"></script>
+    <script type="module" src="src/articlePreview.js"></script>
 
-  <title>Frontend Mentor | Article preview component</title>
-</head>
-<body class="h-screen w-screen flex items-center justify-center bg-gray-200">
-  <cbm-article-preview
-    class="max-w-[327px] md:max-w-[608px] lg:max-w-[730px] block justify-self-center shadow-regular"
-    src="./assets/drawers.jpg"
-    alt=""
-    profile-src="./assets/avatar-michelle.jpg"
-  >
-    <span slot="title">
-      Shift the overall look and feel by adding these wonderful 
-      touches to furniture in your home
-    </span>
-    <span slot="subtitle">
-      Ever been in a room and felt like something was missing? Perhaps 
-      it felt slightly bare and uninviting. I’ve got some simple tips 
-      to help you make any room feel complete.
-    </span>
-    <span slot="author-name">Michelle Appleton</span>
-    <span slot="publish-date">28 Jun 2020</span>
-  </cbm-article-preview>
-</body>
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body class="h-screen w-screen flex items-center justify-center bg-gray-200">
+    <cbm-article-preview
+      class="max-w-[327px] md:max-w-[608px] lg:max-w-[730px] block justify-self-center shadow-regular"
+      src="./assets/drawers.jpg"
+      alt=""
+      profile-src="./assets/avatar-michelle.jpg"
+    >
+      <span slot="title">
+        Shift the overall look and feel by adding these wonderful touches to
+        furniture in your home
+      </span>
+      <span slot="subtitle">
+        Ever been in a room and felt like something was missing? Perhaps it felt
+        slightly bare and uninviting. I’ve got some simple tips to help you make
+        any room feel complete.
+      </span>
+      <span slot="author-name">Michelle Appleton</span>
+      <span slot="publish-date">28 Jun 2020</span>
+    </cbm-article-preview>
+  </body>
 </html>

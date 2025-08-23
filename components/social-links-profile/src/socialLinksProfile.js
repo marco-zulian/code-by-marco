@@ -1,19 +1,19 @@
 class SocialLinksProfile extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot = this.attachShadow({ mode: "open" });
   }
 
   render() {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="./styles/social-links-profile.css">
       <div class="social-links">
-        <img class="social-links__avatar" src=${this.getAttribute('src') || ''} alt=${this.getAttribute('alt') || ''}></img>
+        <img class="social-links__avatar" src=${this.getAttribute("src") || ""} alt=${this.getAttribute("alt") || ""}></img>
         <div class="social-links__info">
-          <p class="social-links__info--name text-preset-1">${this.getAttribute('name')}</p>
-          <p class="social-links__info--subtitle text-preset-2-bold">${this.getAttribute('subtitle')}</p>
+          <p class="social-links__info--name text-preset-1">${this.getAttribute("name")}</p>
+          <p class="social-links__info--subtitle text-preset-2-bold">${this.getAttribute("subtitle")}</p>
         </div>
-        <p class="social-links__bio text-preset-2">${this.getAttribute('bio')}</p>
+        <p class="social-links__bio text-preset-2">${this.getAttribute("bio")}</p>
         <div class="social-links__links"><slot></slot></div>
       </div>
     `;
@@ -24,7 +24,7 @@ class SocialLinksProfile extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['src', 'alt', 'name', 'subtitle', 'bio'];
+    return ["src", "alt", "name", "subtitle", "bio"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -32,4 +32,4 @@ class SocialLinksProfile extends HTMLElement {
   }
 }
 
-customElements.define('cbm-social-links-profile', SocialLinksProfile);
+customElements.define("cbm-social-links-profile", SocialLinksProfile);

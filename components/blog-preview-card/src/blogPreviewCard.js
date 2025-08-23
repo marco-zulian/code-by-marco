@@ -1,7 +1,7 @@
 class BlogPreviewCard extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot = this.attachShadow({ mode: "open" });
 
     this.render();
   }
@@ -32,32 +32,38 @@ class BlogPreviewCard extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['img', 'src', 'title', 'subtitle', 'author', 'avatar-src', 'date'];
+    return ["img", "src", "title", "subtitle", "author", "avatar-src", "date"];
   }
 
   updateImage() {
-    const image = this.shadowRoot.querySelector('.preview-card__image');
-    const imagePath = this.getAttribute('src') || null;
+    const image = this.shadowRoot.querySelector(".preview-card__image");
+    const imagePath = this.getAttribute("src") || null;
     if (imagePath !== null) {
-      const imageAlt = this.getAttribute('alt') || null;
-      image.setAttribute('src', imagePath);
-      image.setAttribute('alt', imageAlt);
-      image.style.display = 'block';
+      const imageAlt = this.getAttribute("alt") || null;
+      image.setAttribute("src", imagePath);
+      image.setAttribute("alt", imageAlt);
+      image.style.display = "block";
     } else {
-      image.style.display = 'none';
+      image.style.display = "none";
     }
   }
 
   updateTexts() {
-    this.shadowRoot.querySelector('.preview-card__creation-date').textContent = `Published ${this.getAttribute('date') || ''}`;
-    this.shadowRoot.querySelector('.preview-card__title').textContent = this.getAttribute('title') || '';
-    this.shadowRoot.querySelector('.preview-card__subtitle').textContent = this.getAttribute('subtitle') || '';
-    this.shadowRoot.querySelector('.preview-card__author--name').textContent = this.getAttribute('author') || '';
+    this.shadowRoot.querySelector(".preview-card__creation-date").textContent =
+      `Published ${this.getAttribute("date") || ""}`;
+    this.shadowRoot.querySelector(".preview-card__title").textContent =
+      this.getAttribute("title") || "";
+    this.shadowRoot.querySelector(".preview-card__subtitle").textContent =
+      this.getAttribute("subtitle") || "";
+    this.shadowRoot.querySelector(".preview-card__author--name").textContent =
+      this.getAttribute("author") || "";
   }
 
   updateAuthor() {
-    const avatarImage = this.shadowRoot.querySelector('.preview-card__author--image');
-    avatarImage.setAttribute('src', this.getAttribute('avatar-src') || '');
+    const avatarImage = this.shadowRoot.querySelector(
+      ".preview-card__author--image",
+    );
+    avatarImage.setAttribute("src", this.getAttribute("avatar-src") || "");
   }
 
   updateContent() {
@@ -68,17 +74,17 @@ class BlogPreviewCard extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
-    case 'img', 'src':
-      this.updateImage();
-      break
-    case 'title', 'subtitle', 'author', 'date':
-      this.updateTexts();
-      break
-    case 'avatar-src':
-      this.updateAuthor();
-      break
+      case ("img", "src"):
+        this.updateImage();
+        break;
+      case ("title", "subtitle", "author", "date"):
+        this.updateTexts();
+        break;
+      case "avatar-src":
+        this.updateAuthor();
+        break;
     }
   }
 }
 
-customElements.define('cbm-blog-preview-card', BlogPreviewCard);
+customElements.define("cbm-blog-preview-card", BlogPreviewCard);

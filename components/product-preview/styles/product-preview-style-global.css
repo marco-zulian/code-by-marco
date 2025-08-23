@@ -110,7 +110,7 @@ body {
           color: var(--product-preview-grey);
         }
 
-        .product-preview__name{
+        .product-preview__name {
           color: var(--product-preview-black);
         }
 

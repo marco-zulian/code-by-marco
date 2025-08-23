@@ -1,7 +1,7 @@
 class BlogPreviewTag extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot = this.attachShadow({ mode: "open" });
     this.render();
   }
 
@@ -17,4 +17,4 @@ class BlogPreviewTag extends HTMLElement {
   }
 }
 
-customElements.define('cbm-blog-preview-tag', BlogPreviewTag);
+customElements.define("cbm-blog-preview-tag", BlogPreviewTag);

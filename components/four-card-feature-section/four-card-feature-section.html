@@ -1,67 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/global.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
-  
-  <script src="./src/card.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <title>Frontend Mentor | Four card feature section</title>
-</head>
-<body>
-  <main>
-    <div class="content">
-      <div class="texts">
-        <h1>
-          <p class="texts__title text-preset-2">Reliable, efficient delivery</p>
-          <p class="texts__title text-preset-1">Powered by Technology</p>
-        </h1>
-        <p class="text-preset-4">Our Artificial Intelligence powered tools use millions of project data points 
-      to ensure that your project is successful</p>
-      </div>
+    <script src="./src/card.js"></script>
 
-      <div class="cards">
-        <cbm-card
-          title="Supervisor"
-          description="Monitors activity to identify project roadblocks"
-          src="./assets/icon-supervisor.svg"
-          alt=""
-        ></cbm-card>
+    <title>Frontend Mentor | Four card feature section</title>
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <div class="texts">
+          <h1>
+            <p class="texts__title text-preset-2">
+              Reliable, efficient delivery
+            </p>
+            <p class="texts__title text-preset-1">Powered by Technology</p>
+          </h1>
+          <p class="text-preset-4">
+            Our Artificial Intelligence powered tools use millions of project
+            data points to ensure that your project is successful
+          </p>
+        </div>
 
-        <div class="middle-cards">
+        <div class="cards">
           <cbm-card
-            class="team-builder__card"
-            title="Team Builder"
-            description="Scans our talent network to create the optimal team for your project"
-            src="./assets/icon-team-builder.svg"
+            title="Supervisor"
+            description="Monitors activity to identify project roadblocks"
+            src="./assets/icon-supervisor.svg"
             alt=""
           ></cbm-card>
 
+          <div class="middle-cards">
+            <cbm-card
+              class="team-builder__card"
+              title="Team Builder"
+              description="Scans our talent network to create the optimal team for your project"
+              src="./assets/icon-team-builder.svg"
+              alt=""
+            ></cbm-card>
+
+            <cbm-card
+              class="karma__card"
+              title="Karma"
+              description="Regularly evaluates our talent to ensure quality"
+              src="./assets/icon-karma.svg"
+              alt=""
+            ></cbm-card>
+          </div>
+
           <cbm-card
-            class="karma__card"
-            title="Karma"
-            description="Regularly evaluates our talent to ensure quality"
-            src="./assets/icon-karma.svg"
+            class="calculator__card"
+            title="Calculator"
+            description="Uses data from past projects to provide better delivery estimates"
+            src="./assets/icon-calculator.svg"
             alt=""
           ></cbm-card>
         </div>
-
-        <cbm-card
-          class="calculator__card"
-          title="Calculator"
-          description="Uses data from past projects to provide better delivery estimates"
-          src="./assets/icon-calculator.svg"
-          alt=""
-        ></cbm-card>
       </div>
-    </div>
-  </main>
-</body>
+    </main>
+  </body>
 </html>
