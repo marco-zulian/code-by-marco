@@ -8,7 +8,7 @@ class SocialLinksProfile extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="./styles/social-links-profile.css">
       <div class="social-links">
-        <img class="social-links__avatar" src=${this.getAttribute("src") || ""} alt=${this.getAttribute("alt") || ""}></img>
+        <img class="social-links__avatar" src=${this.getAttribute("src") || ""} alt=${this.getAttribute("alt") || ""}>
         <div class="social-links__info">
           <p class="social-links__info--name text-preset-1">${this.getAttribute("name")}</p>
           <p class="social-links__info--subtitle text-preset-2-bold">${this.getAttribute("subtitle")}</p>

@@ -1,71 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles/tw.css">
-  <script type="module" src="./src/formControls.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/tw.css" />
+    <script type="module" src="./src/formControls.js" defer></script>
 
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-</head>
-<body>
-  <main class="flex items-center justify-center min-w-screen min-h-screen bg-blue-800">
-    <div id="form-content" class="flex flex-col gap-10 min-w-screen min-h-screen md:max-w-[608px] md:rounded-lg md:w-auto md:min-w-auto md:min-h-auto md:p-10 bg-white lg:flex-row-reverse lg:gap-16 lg:max-w-[904px] lg:px-8 lg:py-6">
-      <picture class="rounded-b-md md:rounded-md w-full object-cover lg:max-w-[400px]">
-        <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1440px)">
-        <source srcset="./assets/images/illustration-sign-up-tablet.svg" media="(min-width: 608px)">
-        <img class="object-cover w-full" src="./assets/images/illustration-sign-up-mobile.svg" alt="">      
-      </picture>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <main
+      class="min-w-screen flex min-h-screen items-center justify-center bg-blue-800"
+    >
+      <div
+        id="form-content"
+        class="min-w-screen md:min-w-auto md:min-h-auto flex min-h-screen flex-col gap-10 bg-white md:w-auto md:max-w-[608px] md:rounded-lg md:p-10 lg:max-w-[904px] lg:flex-row-reverse lg:gap-16 lg:px-8 lg:py-6"
+      >
+        <picture
+          class="w-full rounded-b-md object-cover md:rounded-md lg:max-w-[400px]"
+        >
+          <source
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+            media="(min-width: 1440px)"
+          />
+          <source
+            srcset="./assets/images/illustration-sign-up-tablet.svg"
+            media="(min-width: 608px)"
+          />
+          <img
+            class="w-full object-cover"
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+          />
+        </picture>
 
-      <div class="flex flex-col grow-1 md:grow-0 md:gap-6 justify-between lg:justify-center px-6 md:p-0 pb-11 h-full md:h-auto">
-        <div class="flex flex-col gap-6">
-          <h1 class="font-roboto text-blue-800 text-[clamp(2.5rem,9.5vw,3.5rem)] font-bold">Stay updated!</h1>
-          <p class="font-roboto text-blue-800 text-base/normal">Join 60,000+ product managers receiving monthly updates on:</p>
-          <ul class="flex flex-col gap-2">
-            <li class="grid items-start grid-cols-[auto_1fr] gap-4 before:content-[url('../assets/images/icon-list.svg')] font-roboto text-blue-800 text-base/normal">Product discovery and building what matters</li>
-            <li class="grid items-start grid-cols-[auto_1fr] gap-4 before:content-[url('../assets/images/icon-list.svg')] font-roboto text-blue-800 text-base/normal">Measuring to ensure updates are a success</li>
-            <li class="grid items-start grid-cols-[auto_1fr] gap-4 before:content-[url('../assets/images/icon-list.svg')] font-roboto text-blue-800 text-base/normal">And much more!</li>
-          </ul>
-        </div>
-      
-        <form novalidate autocomplete="off" id="form" class="flex flex-col">
-          <div class="flex justify-between pb-2">
-            <label class="font-roboto font-bold text-[13px]/[150%]" for="email" id="input-label">Email address</label>
-            <p class="hidden text-red" id="email-error" aria-live="polite">Valid email required</p>
+        <div
+          class="grow-1 flex h-full flex-col justify-between px-6 pb-11 md:h-auto md:grow-0 md:gap-6 md:p-0 lg:justify-center"
+        >
+          <div class="flex flex-col gap-6">
+            <h1
+              class="font-roboto text-[clamp(2.5rem,9.5vw,3.5rem)] font-bold text-blue-800"
+            >
+              Stay updated!
+            </h1>
+            <p class="font-roboto text-base/normal text-blue-800">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="flex flex-col gap-2">
+              <li
+                class="font-roboto grid grid-cols-[auto_1fr] items-start gap-4 text-base/normal text-blue-800 before:content-[url('../assets/images/icon-list.svg')]"
+              >
+                Product discovery and building what matters
+              </li>
+              <li
+                class="font-roboto grid grid-cols-[auto_1fr] items-start gap-4 text-base/normal text-blue-800 before:content-[url('../assets/images/icon-list.svg')]"
+              >
+                Measuring to ensure updates are a success
+              </li>
+              <li
+                class="font-roboto grid grid-cols-[auto_1fr] items-start gap-4 text-base/normal text-blue-800 before:content-[url('../assets/images/icon-list.svg')]"
+              >
+                And much more!
+              </li>
+            </ul>
           </div>
-          <input
-            id="email"
-            name="email"
-            part="input"
-            class="px-6 py-4 rounded-sm border-solid border bg-white border-blue-800 placeholder-shown:border-grey not-placeholder-shown:user-invalid:bg-red/20 [.submitted]:user-invalid:bg-red/20 not-placeholder-shown:user-invalid:border-red [.submitted]:user-invalid:border-red not-placeholder-shown:user-invalid:text-red [.submitted]:user-invalid:text-red"
-            type="email"
-            placeholder="email@company.com"
-            aria-labelledby="input-label"
-            aria-describedby="input-error-message"
-            required
-          ></input>
-          
-          <button class="mt-6 rounded-sm w-full flex justify-center py-4 bg-blue-800 hover:bg-linear-to-r from-[#FF6A3A] to-[#FF527B] hover:shadow-[0_16px_32px_rgba(255,97,85,0.5)]" type="submit">
-            <span class="font-roboto font-bold text-white text-base/normal">Subscribe to monthly newsletter</span>
-          </button>
-        </form>
+
+          <form novalidate autocomplete="off" id="form" class="flex flex-col">
+            <div class="flex justify-between pb-2">
+              <label
+                class="font-roboto text-[13px]/[150%] font-bold"
+                for="email"
+                id="input-label"
+                >Email address</label
+              >
+              <p class="text-red hidden" id="email-error" aria-live="polite">
+                Valid email required
+              </p>
+            </div>
+            <input
+              id="email"
+              name="email"
+              part="input"
+              class="placeholder-shown:border-grey not-placeholder-shown:user-invalid:bg-red/20 [.submitted]:user-invalid:bg-red/20 not-placeholder-shown:user-invalid:border-red [.submitted]:user-invalid:border-red not-placeholder-shown:user-invalid:text-red [.submitted]:user-invalid:text-red rounded-sm border border-solid border-blue-800 bg-white px-6 py-4"
+              type="email"
+              placeholder="email@company.com"
+              aria-labelledby="input-label"
+              aria-describedby="input-error-message"
+              required
+            />
+
+            <button
+              class="hover:bg-linear-to-r mt-6 flex w-full justify-center rounded-sm bg-blue-800 from-[#FF6A3A] to-[#FF527B] py-4 hover:shadow-[0_16px_32px_rgba(255,97,85,0.5)]"
+              type="submit"
+            >
+              <span class="font-roboto text-base/normal font-bold text-white"
+                >Subscribe to monthly newsletter</span
+              >
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div id="success-modal" class="hidden bg-white flex-col gap-8 px-6 pt-45 pb-17.5 md:p-16 min-w-screen min-h-screen md:max-w-[504px] md:rounded-lg md:w-auto md:min-w-auto md:min-h-auto">
-      <img src="./assets/images/icon-success.svg" alt="" width="64px" height="64px"></img>
-      <h1 class="font-roboto text-blue-800 text-[3.5rem] font-bold leading-none">Thanks for subscribing!</h1>
-  
-      <p class="font-roboto text-blue-800 text-base/normal">A confirmation email has been sent to 
-        <span id="confirmation-email" class="font-bold">ash@loremcompany.com</span>. 
-      Please open it and click the button inside to confirm your subscription.</p>
+      <div
+        id="success-modal"
+        class="pt-45 pb-17.5 min-w-screen md:min-w-auto md:min-h-auto hidden min-h-screen flex-col gap-8 bg-white px-6 md:w-auto md:max-w-[504px] md:rounded-lg md:p-16"
+      >
+        <img
+          src="./assets/images/icon-success.svg"
+          alt=""
+          width="64px"
+          height="64px"
+        />
+        <h1
+          class="font-roboto text-[3.5rem] font-bold leading-none text-blue-800"
+        >
+          Thanks for subscribing!
+        </h1>
 
-      <button id="success-modal-button" class="mt-auto self-end rounded-sm w-full flex justify-center py-4 bg-blue-800 hover:bg-linear-to-r from-[#FF6A3A] to-[#FF527B] hover:shadow-[0_16px_32px_rgba(255,97,85,0.5)]">
-        <span class="font-roboto font-bold text-white text-base/normal">Dismiss message</span>
-      </button>
-    </div>
-  </main>
-</body>
+        <p class="font-roboto text-base/normal text-blue-800">
+          A confirmation email has been sent to
+          <span id="confirmation-email" class="font-bold"
+            >ash@loremcompany.com</span
+          >. Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+
+        <button
+          id="success-modal-button"
+          class="hover:bg-linear-to-r mt-auto flex w-full justify-center self-end rounded-sm bg-blue-800 from-[#FF6A3A] to-[#FF527B] py-4 hover:shadow-[0_16px_32px_rgba(255,97,85,0.5)]"
+        >
+          <span class="font-roboto text-base/normal font-bold text-white"
+            >Dismiss message</span
+          >
+        </button>
+      </div>
+    </main>
+  </body>
 </html>

@@ -18,7 +18,7 @@ class ArticlePreview extends HTMLElement {
           class="w-full md:w-[229px] lg:w-[285px] object-fill rounded-t-md md:rounded-l-md md:rounded-tr-none"
           src=${this.getAttribute("src")}
           alt=${this.getAttribute("alt")}
-        ></img>
+        >
         <div class="flex flex-col gap-12 md:gap-6 px-7.5 pb-4.5 md:py-10 md:pl-0 md:pr-9 lg:pr-10 lg:py-7.5 relative">
           <div class="flex flex-col gap-6">
             <h2 class="font-manrope font-bold text-gray-900 text-xl/[1.3] tracking-[0.25px]"><slot name="title"></slot></h2>
