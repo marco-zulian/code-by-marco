@@ -238,6 +238,9 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -308,6 +311,10 @@
   }
   .font-roboto {
     font-family: var(--font-roboto);
+  }
+  .text-\[13px\]\/\[150\%\] {
+    font-size: 13px;
+    line-height: 150%;
   }
   .text-base\/normal {
     font-size: var(--text-base);

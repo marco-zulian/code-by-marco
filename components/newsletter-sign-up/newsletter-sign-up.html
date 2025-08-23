@@ -23,7 +23,7 @@
         <div class="flex flex-col gap-6">
           <h1 class="font-roboto text-blue-800 text-[clamp(2.5rem,9.5vw,3.5rem)] font-bold">Stay updated!</h1>
           <p class="font-roboto text-blue-800 text-base/normal">Join 60,000+ product managers receiving monthly updates on:</p>
-          <ul>
+          <ul class="flex flex-col gap-2">
             <li class="grid items-start grid-cols-[auto_1fr] gap-4 before:content-[url('../assets/images/icon-list.svg')] font-roboto text-blue-800 text-base/normal">Product discovery and building what matters</li>
             <li class="grid items-start grid-cols-[auto_1fr] gap-4 before:content-[url('../assets/images/icon-list.svg')] font-roboto text-blue-800 text-base/normal">Measuring to ensure updates are a success</li>
             <li class="grid items-start grid-cols-[auto_1fr] gap-4 before:content-[url('../assets/images/icon-list.svg')] font-roboto text-blue-800 text-base/normal">And much more!</li>
@@ -32,7 +32,7 @@
       
         <form novalidate autocomplete="off" id="form" class="flex flex-col">
           <div class="flex justify-between pb-2">
-            <label for="email" id="input-label">Email address</label>
+            <label class="font-roboto font-bold text-[13px]/[150%]" for="email" id="input-label">Email address</label>
             <p class="hidden text-red" id="email-error" aria-live="polite">Valid email required</p>
           </div>
           <input
