@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/tw.css">
+  <script src="./src/dataControls.js" type="module"></script>
+  <script src="./src/card.js" type="module"></script>
+  <script src="./src/userCard.js" type="module"></script>
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body class="min-w-screen min-h-screen px-6 py-20 bg-navy-950 flex items-center justify-center">
+  <div class="grid gap-6 lg:gap-8 md:grid-row-3 md:grid-cols-3 lg:grid-rows-2 lg:grid-cols-4 justify-start items-start max-w-[1116px]">
+    <cbm-user-card
+      id="user-card"
+      src="./assets/image-jeremy.png"
+      name="Jeremy Robson"
+      class="md:col-span-3 lg:col-1 lg:row-span-full lg:h-full"
+    ></cbm-user-card>
+    
+    <cbm-card
+      id="work-card"
+      category="Work"
+      period="Daily"
+      currAmount="5"
+      lastAmount="7"
+    ></cbm-card>
+
+    <cbm-card
+      id="play-card"
+      category="Play"
+      period="Daily"
+      currAmount="1"
+      lastAmount="2"
+    ></cbm-card>
+    
+    <cbm-card
+      id="study-card"
+      category="Study"
+      period="Daily"
+      currAmount="0"
+      lastAmount="1"
+    ></cbm-card>
+    
+    <cbm-card
+      id="exercise-card"
+      category="Exercise"
+      period="Daily"
+      currAmount="1"
+      lastAmount="1"
+    ></cbm-card>
+
+    <cbm-card
+      id="social-card"
+      category="Social"
+      period="Daily"
+      currAmount="1"
+      lastAmount="3"
+    ></cbm-card>
+
+    <cbm-card
+      id="self-care-card"
+      category="Self Care"
+      period="Daily"
+      currAmount="0"
+      lastAmount="1"
+    ></cbm-card>
+  </div>
+</body>
+</html>

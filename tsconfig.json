@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "target": "es2015",
+    "lib": ["es2024", "dom"],
+    "moduleResolution": "node",
+    "module": "esnext"
+  },
+  "include": ["components/**/*"]
+}
