@@ -1048,6 +1048,11 @@
       display: flex;
     }
   }
+  .lg\:h-19\.5 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 19.5);
+    }
+  }
   .lg\:h-full {
     @media (width >= 64rem) {
       height: 100%;

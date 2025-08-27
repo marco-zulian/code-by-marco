@@ -25,7 +25,7 @@ class UserCard extends LitElement {
     return html`
       <div class="rounded-md bg-navy-900 flex flex-col h-full">
         <div class="rounded-md bg-purple-600 p-8 flex gap-6 items-center lg:flex-col lg:items-start lg:gap-10 lg:grow-1">
-          <img class="box-content h-16 border-white border-solid border-3 rounded-[50%]" src="${this.src}" alt="${this.alt}">
+          <img class="box-content h-16 border-white border-solid border-3 rounded-[50%] lg:h-19.5" src="${this.src}" alt="${this.alt}">
           <div>
             <p class="font-rubik text-navy-200 text-sm/[18px] font-regular">Report for</p>
             <p class="font-rubik text-white text-lg/[28px] lg:text-2xl/[47px] font-light">${this.name}</p>
