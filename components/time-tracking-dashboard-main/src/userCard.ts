@@ -1,22 +1,25 @@
-import { LitElement, html, adoptStyles } from 'https://esm.sh/lit';
-import { customElement, property, state } from 'https://esm.sh/lit/decorators.js';
+import { LitElement, html, adoptStyles } from "https://esm.sh/lit";
+import {
+  customElement,
+  property,
+  state,
+} from "https://esm.sh/lit/decorators.js";
 import sheet from "../styles/tw.css" with { type: "css" };
 
-@customElement('cbm-user-card')
+@customElement("cbm-user-card")
 class UserCard extends LitElement {
+  @property({ type: String })
+  src: string = "";
 
   @property({ type: String })
-  src: string = '';
+  alt: string = "";
 
   @property({ type: String })
-  alt: string = '';
-
-  @property({ type: String })
-  name: string = '';
+  name: string = "";
 
   @state({ type: String })
-  _selected: string = 'Weekly';
-  
+  _selected: string = "Weekly";
+
   firstUpdated() {
     adoptStyles(this.renderRoot as ShadowRoot, [sheet]);
   }
@@ -32,17 +35,25 @@ class UserCard extends LitElement {
           </div>
         </div>
         <div class="grid grid-cols-3 py-6 w-full md:w-[343px] lg:w-full self-center lg:grid-cols-1 lg:grid-rows-3 lg:items-start lg:p-8 lg:mt-auto lg:gap-5">
-          <button @click=${() => this._dispatchPeriodChange('Daily')} class="lg:items-start lg:flex"><span class="font-rubik cursor-pointer ${this._selected == 'Daily' ? 'text-white' : 'text-purple-500'} hover:text-white text-md/[21px] font-regular">Daily</span></button>
-          <button @click=${() => this._dispatchPeriodChange('Weekly')} class="lg:flex lg:items-start"><span class="font-rubik cursor-pointer ${this._selected == 'Weekly' ? 'text-white' : 'text-purple-500'} hover:text-white text-md/[21px] font-regular">Weekly</span></button>
-          <button @click=${() => this._dispatchPeriodChange('Monthly')} class="lg:flex lg:items-start"><span class="font-rubik cursor-pointer ${this._selected == 'Monthly' ? 'text-white' : 'text-purple-500'} hover:text-white text-md/[21px] font-regular"<p>Monthly</span></button>
+          <button @click=${() => this._dispatchPeriodChange("Daily")} class="lg:items-start lg:flex"><span class="font-rubik cursor-pointer ${this._selected == "Daily" ? "text-white" : "text-purple-500"} hover:text-white text-md/[21px] font-regular">Daily</span></button>
+          <button @click=${() => this._dispatchPeriodChange("Weekly")} class="lg:flex lg:items-start"><span class="font-rubik cursor-pointer ${this._selected == "Weekly" ? "text-white" : "text-purple-500"} hover:text-white text-md/[21px] font-regular">Weekly</span></button>
+          <button @click=${() => this._dispatchPeriodChange("Monthly")} class="lg:flex lg:items-start"><span class="font-rubik cursor-pointer ${this._selected == "Monthly" ? "text-white" : "text-purple-500"} hover:text-white text-md/[21px] font-regular"<p>Monthly</span></button>
         </div>
       </div>
-    `
+    `;
   }
 
   _dispatchPeriodChange(period: string) {
-    if (period === this._selected) { return }
-    this.dispatchEvent(new CustomEvent('period-change', { detail: period, bubbles: true, composed: true })) 
-    this._selected = period
+    if (period === this._selected) {
+      return;
+    }
+    this.dispatchEvent(
+      new CustomEvent("period-change", {
+        detail: period,
+        bubbles: true,
+        composed: true,
+      }),
+    );
+    this._selected = period;
   }
 }

@@ -20,11 +20,11 @@
   </head>
   <body>
     <main
-      class="min-w-screen flex min-h-screen items-center justify-center bg-blue-800"
+      class="flex min-h-screen min-w-screen items-center justify-center bg-blue-800"
     >
       <div
         id="form-content"
-        class="min-w-screen md:min-w-auto md:min-h-auto flex min-h-screen flex-col gap-10 bg-white md:w-auto md:max-w-[608px] md:rounded-lg md:p-10 lg:max-w-[904px] lg:flex-row-reverse lg:gap-16 lg:px-8 lg:py-6"
+        class="flex min-h-screen min-w-screen flex-col gap-10 bg-white md:min-h-auto md:w-auto md:max-w-[608px] md:min-w-auto md:rounded-lg md:p-10 lg:max-w-[904px] lg:flex-row-reverse lg:gap-16 lg:px-8 lg:py-6"
       >
         <picture
           class="w-full rounded-b-md object-cover md:rounded-md lg:max-w-[400px]"
@@ -45,7 +45,7 @@
         </picture>
 
         <div
-          class="grow-1 flex h-full flex-col justify-between px-6 pb-11 md:h-auto md:grow-0 md:gap-6 md:p-0 lg:justify-center"
+          class="flex h-full grow-1 flex-col justify-between px-6 pb-11 md:h-auto md:grow-0 md:gap-6 md:p-0 lg:justify-center"
         >
           <div class="flex flex-col gap-6">
             <h1
@@ -100,7 +100,7 @@
             />
 
             <button
-              class="hover:bg-linear-to-r mt-6 flex w-full justify-center rounded-sm bg-blue-800 from-[#FF6A3A] to-[#FF527B] py-4 hover:shadow-[0_16px_32px_rgba(255,97,85,0.5)]"
+              class="mt-6 flex w-full justify-center rounded-sm bg-blue-800 from-[#FF6A3A] to-[#FF527B] py-4 hover:bg-linear-to-r hover:shadow-[0_16px_32px_rgba(255,97,85,0.5)]"
               type="submit"
             >
               <span class="font-roboto text-base/normal font-bold text-white"
@@ -113,7 +113,7 @@
 
       <div
         id="success-modal"
-        class="pt-45 pb-17.5 min-w-screen md:min-w-auto md:min-h-auto hidden min-h-screen flex-col gap-8 bg-white px-6 md:w-auto md:max-w-[504px] md:rounded-lg md:p-16"
+        class="hidden min-h-screen min-w-screen flex-col gap-8 bg-white px-6 pt-45 pb-17.5 md:min-h-auto md:w-auto md:max-w-[504px] md:min-w-auto md:rounded-lg md:p-16"
       >
         <img
           src="./assets/images/icon-success.svg"
@@ -122,7 +122,7 @@
           height="64px"
         />
         <h1
-          class="font-roboto text-[3.5rem] font-bold leading-none text-blue-800"
+          class="font-roboto text-[3.5rem] leading-none font-bold text-blue-800"
         >
           Thanks for subscribing!
         </h1>
@@ -137,7 +137,7 @@
 
         <button
           id="success-modal-button"
-          class="hover:bg-linear-to-r mt-auto flex w-full justify-center self-end rounded-sm bg-blue-800 from-[#FF6A3A] to-[#FF527B] py-4 hover:shadow-[0_16px_32px_rgba(255,97,85,0.5)]"
+          class="mt-auto flex w-full justify-center self-end rounded-sm bg-blue-800 from-[#FF6A3A] to-[#FF527B] py-4 hover:bg-linear-to-r hover:shadow-[0_16px_32px_rgba(255,97,85,0.5)]"
         >
           <span class="font-roboto text-base/normal font-bold text-white"
             >Dismiss message</span
