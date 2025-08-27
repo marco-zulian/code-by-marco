@@ -30,6 +30,7 @@
     --text-xl: 2rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 2.5rem;
+    --text-3xl: 3.5rem;
     --font-weight-light: 300;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
@@ -1001,6 +1002,12 @@
       line-height: 66px;
     }
   }
+  .md\:text-3xl\/\[66px\] {
+    @media (width >= 48rem) {
+      font-size: var(--text-3xl);
+      line-height: 66px;
+    }
+  }
   .lg\:col-1 {
     @media (width >= 64rem) {
       grid-column: 1;
@@ -1124,6 +1131,11 @@
   .lg\:gap-5 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 5);
+    }
+  }
+  .lg\:gap-6 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 6);
     }
   }
   .lg\:gap-8 {
