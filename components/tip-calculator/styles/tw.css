@@ -616,6 +616,11 @@
       height: 100%;
     }
   }
+  .lg\:min-h-103 {
+    @media (width >= 64rem) {
+      min-height: calc(var(--spacing) * 103);
+    }
+  }
   .lg\:w-103 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 103);
@@ -639,6 +644,11 @@
   .lg\:pt-12 {
     @media (width >= 64rem) {
       padding-top: calc(var(--spacing) * 12);
+    }
+  }
+  .lg\:pt-22 {
+    @media (width >= 64rem) {
+      padding-top: calc(var(--spacing) * 22);
     }
   }
 }
