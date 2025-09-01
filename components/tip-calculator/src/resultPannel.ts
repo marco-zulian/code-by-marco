@@ -28,16 +28,16 @@ export default class ResultPannel extends LitElement {
       <div class="flex flex-col gap-6 justify-between rounded-md bg-green-900 px-8 py-6 lg:px-10 lg:py-9.5 h-full">
         <div class="flex flex-col gap-6">
           <div class="flex justify-between items-center">
-            <p class="font-bold font-space-mono text-md/[24px] text-white">Tip Amount<br><span class="text-sm/[19px] text-grey-400">/per person</span></p>
+            <p class="font-bold font-space-mono text-md/[24px] text-white">Tip Amount<br><span class="text-sm/[19px] text-grey-400">/ person</span></p>
             <p class="font-bold font-space-mono text-2xl/[47px] text-green-400 lg:text-3xl/[71px]">${this._getPerPersonTip()}</p>
           </div>
           <div class="flex justify-between items-center">
-            <p class="font-bold font-space-mono text-md/[24px] text-white">Total<br><span class="text-sm/[19px] text-grey-400">/per person</span></p>
+            <p class="font-bold font-space-mono text-md/[24px] text-white">Total<br><span class="text-sm/[19px] text-grey-400">/ person</span></p>
             <p class="font-bold font-space-mono text-2xl/[47px] text-green-400 lg:text-3xl/[71px]">${this._getPerPersonPrice()}</p>
           </div>
         </div>
         
-        <button @click=${() => this._resetFields()} class="not-disabled:cursor-pointer disabled:bg-green-750 rounded-sm px-8 py-2 w-full uppercase text-green-900 bg-green-400 hover:bg-green-200 font-bold font-space-mono text-lg/[30px]">Reset</button>
+        <button @click=${() => this._resetFields()} class="not-disabled:cursor-pointer disabled:bg-green-750 disabled:bg-green-800 rounded-sm px-8 py-2 w-full uppercase text-green-900 bg-green-400 hover:bg-green-200 font-bold font-space-mono text-lg/[30px]">Reset</button>
       </div>
     `
   }

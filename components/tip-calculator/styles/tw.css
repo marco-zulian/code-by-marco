@@ -11,6 +11,7 @@
     --color-orange-400: #E17052;
     --color-green-200: #9FE8DF;
     --color-green-400: #26C2AE;
+    --color-green-800: #085C61;
     --color-green-900: #00474B;
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-white: #FFFFFF;
@@ -506,6 +507,11 @@
       background-color: var(--color-green-750);
     }
   }
+  .disabled\:bg-green-800 {
+    &:disabled {
+      background-color: var(--color-green-800);
+    }
+  }
   .has-checked\:outline-2 {
     &:has(*:checked) {
       outline-style: var(--tw-outline-style);
@@ -677,6 +683,11 @@
   .lg\:px-10 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:py-8 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 8);
     }
   }
   .lg\:py-9\.5 {
