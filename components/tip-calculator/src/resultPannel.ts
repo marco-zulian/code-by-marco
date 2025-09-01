@@ -25,7 +25,7 @@ export default class ResultPannel extends LitElement {
 
   render() {
     return html`
-      <div class="flex flex-col gap-6 justify-between rounded-md bg-green-900 px-8 py-6 h-full">
+      <div class="flex flex-col gap-6 justify-between rounded-md bg-green-900 px-8 py-6 lg:px-10 lg:py-9.5 h-full">
         <div class="flex flex-col gap-6">
           <div class="flex justify-between">
             <p class="font-bold font-space-mono text-md/[24px] text-white">Tip Amount<br><span class="text-sm/[19px] text-grey-400">/per person</span></p>
