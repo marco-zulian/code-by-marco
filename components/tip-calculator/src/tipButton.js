@@ -10,9 +10,9 @@ import sheet from "./../styles/tw.css" with { type: "css" };
 let RadioButton = class RadioButton extends LitElement {
     constructor() {
         super(...arguments);
-        this.name = '';
-        this.value = '';
-        this.label = '';
+        this.name = "";
+        this.value = "";
+        this.label = "";
         this.checked = false;
         this._internals = this.attachInternals();
         this._inputId = `input-${Math.random().toString(36).slice(2)}`;
@@ -20,13 +20,12 @@ let RadioButton = class RadioButton extends LitElement {
     firstUpdated(_changedProperties) {
         adoptStyles(this.renderRoot, [sheet]);
         this._syncInputRef();
-        this.addEventListener('click', () => this._toggle());
+        this.addEventListener("click", () => this._toggle());
     }
     updated(_changedProperties) {
-        if (_changedProperties.has('checked')) {
+        if (_changedProperties.has("checked")) {
             this._syncValue();
         }
-        ;
     }
     _syncValue() {
         this._internals.setFormValue(this.checked ? this.value : null, this.name);
@@ -34,21 +33,21 @@ let RadioButton = class RadioButton extends LitElement {
         if (this.checked) {
             group = document.querySelectorAll(`cbm-radio-button[name="${this.name}"], cbm-radio-button-custom[name="${this.name}"]`);
         }
-        group === null || group === void 0 ? void 0 : group.forEach(radio => {
+        group === null || group === void 0 ? void 0 : group.forEach((radio) => {
             if (radio != this) {
                 radio.checked = false;
                 radio._internals.setFormValue(null);
             }
         });
         if (this.checked) {
-            this.dispatchEvent(new Event('change', { bubbles: true, composed: true }));
+            this.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
         }
     }
     _syncInputRef() {
         this._input.id = this._inputId;
         const attributes = this.attributes;
         for (const attr of Array.from(attributes)) {
-            if (attr.name === 'class' || attr.name === 'id') {
+            if (attr.name === "class" || attr.name === "id") {
                 continue;
             }
             this._input.setAttribute(attr.name, attr.value);
@@ -62,17 +61,25 @@ let RadioButton = class RadioButton extends LitElement {
     }
     render() {
         return html `
-      <div class="cursor-pointer flex justify-center rounded-sm px-4 py-2 w-full ${this._getButtonBgColor()} ${this._getTextColor()} hover:bg-green-200 hover:text-green-900 font-bold font-space-mono text-xl/[36px]">
+      <div
+        class="${this._getButtonBgColor()} ${this._getTextColor()} font-space-mono flex w-full cursor-pointer justify-center rounded-sm px-4 py-2 text-xl/[36px] font-bold hover:bg-green-200 hover:text-green-900"
+      >
         <label class="cursor-pointer" for=${this._inputId}>${this.label}</label>
-        <input class="hidden" id=${this._inputId} .checked=${this.checked} @change=${() => this._toggle()} type="radio"/>
+        <input
+          class="hidden"
+          id=${this._inputId}
+          .checked=${this.checked}
+          @change=${() => this._toggle()}
+          type="radio"
+        />
       </div>
     `;
     }
     _getButtonBgColor() {
-        return this.checked ? 'bg-green-400' : 'bg-green-900';
+        return this.checked ? "bg-green-400" : "bg-green-900";
     }
     _getTextColor() {
-        return this.checked ? 'text-green-900' : 'text-grey-50';
+        return this.checked ? "text-green-900" : "text-grey-50";
     }
 };
 RadioButton.formAssociated = true;
@@ -89,9 +96,9 @@ __decorate([
     property({ type: Boolean, reflect: true })
 ], RadioButton.prototype, "checked", void 0);
 __decorate([
-    query('input')
+    query("input")
 ], RadioButton.prototype, "_input", void 0);
 RadioButton = __decorate([
-    customElement('cbm-radio-button')
+    customElement("cbm-radio-button")
 ], RadioButton);
 export default RadioButton;

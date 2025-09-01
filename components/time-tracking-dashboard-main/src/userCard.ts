@@ -1,9 +1,5 @@
 import { LitElement, html, adoptStyles } from "lit";
-import {
-  customElement,
-  property,
-  state,
-} from "lit/decorators.js";
+import { customElement, property, state } from "lit/decorators.js";
 import sheet from "../styles/tw.css" with { type: "css" };
 
 @customElement("cbm-user-card")

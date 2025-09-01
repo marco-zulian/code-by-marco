@@ -2,18 +2,18 @@ import InputText from "./input";
 import ResultPannel from "./resultPannel";
 import RadioButton from "./tipButton";
 
-const billInput = document.querySelector('#bill-input') as InputText;
-const peopleInput = document.querySelector('#people-input') as InputText;
-const tipsForm = document.querySelector('#tips-form') as HTMLFormElement;
-const resultPannel = document.querySelector('#result-pannel') as ResultPannel;
-const buttons = document.querySelectorAll('cbm-radio-button');
+const billInput = document.querySelector("#bill-input") as InputText;
+const peopleInput = document.querySelector("#people-input") as InputText;
+const tipsForm = document.querySelector("#tips-form") as HTMLFormElement;
+const resultPannel = document.querySelector("#result-pannel") as ResultPannel;
+const buttons = document.querySelectorAll("cbm-radio-button");
 
-billInput.addEventListener('input', (e: Event) => {
+billInput.addEventListener("input", (e: Event) => {
   const element = e.target as HTMLInputElement;
-  if (element.value === '') { 
-    element.setCustomValidity('')
+  if (element.value === "") {
+    element.setCustomValidity("");
     resultPannel.setData(buildData());
-    return
+    return;
   }
 
   const value = Number(element.value);
@@ -25,16 +25,16 @@ billInput.addEventListener('input', (e: Event) => {
   resultPannel.setData(buildData());
 });
 
-peopleInput.addEventListener('input', (e: Event) => {
+peopleInput.addEventListener("input", (e: Event) => {
   const element = e.target as HTMLInputElement;
-  if (element.value === '') { 
-    element.setCustomValidity('')
+  if (element.value === "") {
+    element.setCustomValidity("");
     resultPannel.setData(buildData());
     return;
   }
 
   const value = Number(element.value);
-  
+
   if (value < 0) {
     element.setCustomValidity("Can't be smaller than zero");
   } else if (value === 0) {
@@ -44,7 +44,7 @@ peopleInput.addEventListener('input', (e: Event) => {
   resultPannel.setData(buildData());
 });
 
-tipsForm.addEventListener('change', (e: Event) => {
+tipsForm.addEventListener("change", (e: Event) => {
   const target = e.target as RadioButton;
 
   if (target?.checked) {
@@ -53,13 +53,13 @@ tipsForm.addEventListener('change', (e: Event) => {
   }
 });
 
-document.addEventListener('reset-form', () => {
+document.addEventListener("reset-form", () => {
   tipsForm?.reset();
-  buttons.forEach(e => {
+  buttons.forEach((e) => {
     const input = e as HTMLInputElement;
     if (input) {
       input.checked = false;
-    }  
+    }
   });
 });
 
