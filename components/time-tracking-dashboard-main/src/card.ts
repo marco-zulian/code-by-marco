@@ -1,5 +1,5 @@
-import { LitElement, html, adoptStyles } from "https://esm.sh/lit";
-import { customElement, property } from "https://esm.sh/lit/decorators.js";
+import { LitElement, html, adoptStyles } from "lit";
+import { customElement, property } from "lit/decorators.js";
 import sheet from "../styles/tw.css" with { type: "css" };
 
 type CardType = "Work" | "Play" | "Study" | "Exercise" | "Social" | "Self Care";

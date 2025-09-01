@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -12,6 +11,16 @@
       href="../../assets/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./styles/tw.css" />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "lit": "https://esm.sh/lit",
+          "lit/decorators.js": "https://esm.sh/lit/decorators.js"
+        }
+      }
+    </script>
+
     <script src="./src/dataControls.js" type="module"></script>
     <script src="./src/card.js" type="module"></script>
     <script src="./src/userCard.js" type="module"></script>

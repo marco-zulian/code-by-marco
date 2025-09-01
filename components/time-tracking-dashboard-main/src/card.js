@@ -4,8 +4,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { LitElement, html, adoptStyles } from "https://esm.sh/lit";
-import { customElement, property } from "https://esm.sh/lit/decorators.js";
+import { LitElement, html, adoptStyles } from "lit";
+import { customElement, property } from "lit/decorators.js";
 import sheet from "../styles/tw.css" with { type: "css" };
 let Card = class Card extends LitElement {
     constructor() {

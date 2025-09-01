@@ -1,9 +1,9 @@
-import { LitElement, html, adoptStyles } from "https://esm.sh/lit";
+import { LitElement, html, adoptStyles } from "lit";
 import {
   customElement,
   property,
   state,
-} from "https://esm.sh/lit/decorators.js";
+} from "lit/decorators.js";
 import sheet from "../styles/tw.css" with { type: "css" };
 
 @customElement("cbm-user-card")
@@ -17,7 +17,7 @@ class UserCard extends LitElement {
   @property({ type: String })
   name: string = "";
 
-  @state({ type: String })
+  @state()
   _selected: string = "Weekly";
 
   firstUpdated() {
