@@ -71,7 +71,7 @@ let RangeInput = class RangeInput extends LitElement {
         </div>
         <input
           type="range"
-          class="accent-green-200 border-none outline-none"
+          class="accent-green-200 border-none outline-none m-0 h-7"
           id=${this._inputId}
           @input=${() => this._syncValue()}
         />
