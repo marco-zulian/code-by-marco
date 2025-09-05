@@ -1,6 +1,5 @@
 import { LitElement, html, adoptStyles } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import sheet from "../styles/tw.css" with { type: "css" };
 
 type CardType = "Work" | "Play" | "Study" | "Exercise" | "Social" | "Self Care";
 export type CardPeriodicity = "Daily" | "Weekly" | "Monthly";
@@ -20,7 +19,16 @@ export default class Card extends LitElement {
   lastAmount: number = 0;
 
   firstUpdated() {
-    adoptStyles(this.renderRoot as ShadowRoot, [sheet]);
+    fetch("./styles/tw.css")
+      .then((res) => {
+        return res.text()
+      })
+      .then((cssText) => {
+        const sheet = new CSSStyleSheet();
+        sheet.replaceSync(cssText);
+
+        adoptStyles(this.renderRoot as ShadowRoot, [sheet]);
+      });
   }
 
   render() {

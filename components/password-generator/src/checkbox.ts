@@ -1,8 +1,8 @@
 import { LitElement, html, adoptStyles, PropertyValues } from "lit";
 import { customElement, property, query } from "lit/decorators.js";
 
-@customElement("cbm-radio-button")
-export default class RadioButton extends LitElement {
+@customElement("cbm-checkbox")
+export default class Checkbox extends LitElement {
   static formAssociated = true;
 
   @property({ type: String }) name = "";
@@ -14,7 +14,7 @@ export default class RadioButton extends LitElement {
 
   protected _internals = this.attachInternals();
   protected _inputId = `input-${Math.random().toString(36).slice(2)}`;
-
+ 
   protected firstUpdated(_changedProperties: PropertyValues): void {
     fetch("./styles/tw.css")
       .then((res) => {
@@ -28,7 +28,6 @@ export default class RadioButton extends LitElement {
       });
 
     this._syncInputRef();
-    this.addEventListener("click", () => this._toggle());
   }
 
   protected updated(_changedProperties: PropertyValues): void {
@@ -39,20 +38,6 @@ export default class RadioButton extends LitElement {
 
   protected _syncValue() {
     this._internals.setFormValue(this.checked ? this.value : null, this.name);
-
-    let group: NodeListOf<RadioButton>;
-    if (this.checked) {
-      group = document.querySelectorAll<RadioButton>(
-        `cbm-radio-button[name="${this.name}"], cbm-radio-button-custom[name="${this.name}"]`,
-      );
-    }
-
-    group?.forEach((radio) => {
-      if (radio != this) {
-        radio.checked = false;
-        radio._internals.setFormValue(null);
-      }
-    });
 
     if (this.checked) {
       this.dispatchEvent(
@@ -76,33 +61,28 @@ export default class RadioButton extends LitElement {
   }
 
   protected _toggle() {
-    if (!this.checked) {
-      this.checked = true;
-    }
+    this.checked = !this.checked;
   }
 
   render() {
     return html`
       <div
-        class="${this._getButtonBgColor()} ${this._getTextColor()} font-space-mono flex w-full cursor-pointer justify-center rounded-sm px-4 py-2 text-xl/[36px] font-bold hover:bg-green-200 hover:text-green-900"
+        @click=${() => this._toggle()}
+        class="font-jet-brains-mono text-grey-200 text-md flex gap-4 md:gap-6 w-full cursor-pointer justify-center items-center"
       >
-        <label class="cursor-pointer" for=${this._inputId}>${this.label}</label>
         <input
           class="hidden"
           id=${this._inputId}
           .checked=${this.checked}
-          @change=${() => this._toggle()}
-          type="radio"
+          type="checkbox"
         />
+        <div class="flex items-center justify-center w-5 h-5 ${this._getCheckboxClasses()}">${this.checked ? html`<svg width="14" height="12" xmlns="http://www.w3.org/2000/svg"><path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8"/></svg>` : ""}</div>
+        <label @click=${() => this._toggle()} class="cursor-pointer" for=${this._inputId}>${this.label}</label>
       </div>
     `;
   }
 
-  _getButtonBgColor() {
-    return this.checked ? "bg-green-400" : "bg-green-900";
-  }
-
-  _getTextColor() {
-    return this.checked ? "text-green-900" : "text-grey-50";
+  private _getCheckboxClasses() {
+    return this.checked ? "bg-green-200" : "border-2 border-white border-solid";
   }
 }

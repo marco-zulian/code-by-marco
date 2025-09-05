@@ -1,6 +1,5 @@
 import { LitElement, html, adoptStyles } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
-import sheet from "../styles/tw.css" with { type: "css" };
 
 @customElement("cbm-user-card")
 class UserCard extends LitElement {
@@ -17,7 +16,16 @@ class UserCard extends LitElement {
   _selected: string = "Weekly";
 
   firstUpdated() {
-    adoptStyles(this.renderRoot as ShadowRoot, [sheet]);
+    fetch("./styles/tw.css")
+      .then((res) => {
+        return res.text()
+      })
+      .then((cssText) => {
+        const sheet = new CSSStyleSheet();
+        sheet.replaceSync(cssText);
+
+        adoptStyles(this.renderRoot as ShadowRoot, [sheet]);
+      });
   }
 
   render() {

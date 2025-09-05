@@ -1,6 +1,5 @@
 import { LitElement, html, adoptStyles, PropertyValues } from "lit";
 import { customElement, state, query } from "lit/decorators.js";
-import sheet from "./../styles/tw.css" with { type: "css" };
 
 @customElement("cbm-result-pannel")
 export default class ResultPannel extends LitElement {
@@ -19,7 +18,17 @@ export default class ResultPannel extends LitElement {
   @query("button") private _button!: HTMLButtonElement;
 
   protected firstUpdated(_changedProperties: PropertyValues): void {
-    adoptStyles(this.renderRoot as ShadowRoot, [sheet]);
+    fetch("./styles/tw.css")
+      .then((res) => {
+        return res.text()
+      })
+      .then((cssText) => {
+        const sheet = new CSSStyleSheet();
+        sheet.replaceSync(cssText);
+
+        adoptStyles(this.renderRoot as ShadowRoot, [sheet]);
+      });
+    
     this._button.disabled = this.disabled;
   }
 

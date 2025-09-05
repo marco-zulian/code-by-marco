@@ -6,7 +6,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { LitElement, html, adoptStyles } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
-import sheet from "../styles/tw.css" with { type: "css" };
 let UserCard = class UserCard extends LitElement {
     constructor() {
         super(...arguments);
@@ -16,7 +15,15 @@ let UserCard = class UserCard extends LitElement {
         this._selected = "Weekly";
     }
     firstUpdated() {
-        adoptStyles(this.renderRoot, [sheet]);
+        fetch("./styles/tw.css")
+            .then((res) => {
+            return res.text();
+        })
+            .then((cssText) => {
+            const sheet = new CSSStyleSheet();
+            sheet.replaceSync(cssText);
+            adoptStyles(this.renderRoot, [sheet]);
+        });
     }
     render() {
         return html `

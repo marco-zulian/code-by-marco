@@ -1,6 +1,5 @@
 import { LitElement, html, adoptStyles, PropertyValues } from "lit";
 import { customElement, property, query, state } from "lit/decorators.js";
-import sheet from "./../styles/tw.css" with { type: "css" };
 
 @customElement("cbm-input")
 export default class InputText extends LitElement {
@@ -18,7 +17,16 @@ export default class InputText extends LitElement {
   private _errorId = `error-${Math.random().toString(36).slice(2)}`;
 
   protected firstUpdated(_changedProperties: PropertyValues): void {
-    adoptStyles(this.renderRoot as ShadowRoot, [sheet]);
+    fetch("./styles/tw.css")
+      .then((res) => {
+        return res.text()
+      })
+      .then((cssText) => {
+        const sheet = new CSSStyleSheet();
+        sheet.replaceSync(cssText);
+
+        adoptStyles(this.renderRoot as ShadowRoot, [sheet]);
+      });
 
     this._syncInputRef();
   }

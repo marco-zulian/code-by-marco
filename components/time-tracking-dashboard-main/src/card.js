@@ -1,38 +1,32 @@
-var __decorate =
-  (this && this.__decorate) ||
-  function (decorators, target, key, desc) {
-    var c = arguments.length,
-      r =
-        c < 3
-          ? target
-          : desc === null
-            ? (desc = Object.getOwnPropertyDescriptor(target, key))
-            : desc,
-      d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-      r = Reflect.decorate(decorators, target, key, desc);
-    else
-      for (var i = decorators.length - 1; i >= 0; i--)
-        if ((d = decorators[i]))
-          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return (c > 3 && r && Object.defineProperty(target, key, r), r);
-  };
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 import { LitElement, html, adoptStyles } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import sheet from "../styles/tw.css" with { type: "css" };
 let Card = class Card extends LitElement {
-  constructor() {
-    super(...arguments);
-    this.category = "Work";
-    this.period = "Daily";
-    this.currAmount = 0;
-    this.lastAmount = 0;
-  }
-  firstUpdated() {
-    adoptStyles(this.renderRoot, [sheet]);
-  }
-  render() {
-    return html`
+    constructor() {
+        super(...arguments);
+        this.category = "Work";
+        this.period = "Daily";
+        this.currAmount = 0;
+        this.lastAmount = 0;
+    }
+    firstUpdated() {
+        fetch("./styles/tw.css")
+            .then((res) => {
+            return res.text();
+        })
+            .then((cssText) => {
+            const sheet = new CSSStyleSheet();
+            sheet.replaceSync(cssText);
+            adoptStyles(this.renderRoot, [sheet]);
+        });
+    }
+    render() {
+        return html `
       <div
         class="${this.getBackgroundColor()} relative overflow-hidden rounded-md pt-9.5 md:pt-11.25"
       >
@@ -76,53 +70,63 @@ let Card = class Card extends LitElement {
         </div>
       </div>
     `;
-  }
-  getLastLabel() {
-    switch (this.period) {
-      case "Daily":
-        return "Yesterday";
-      case "Weekly":
-        return "Last Week";
-      case "Monthly":
-        return "Last Month";
     }
-  }
-  getBackgroundColor() {
-    switch (this.category) {
-      case "Work":
-        return "bg-orange-300";
-      case "Play":
-        return "bg-blue-300";
-      case "Study":
-        return "bg-pink-400";
-      case "Exercise":
-        return "bg-green-400";
-      case "Social":
-        return "bg-purple-700";
-      case "Self Care":
-        return "bg-yellow-300";
+    getLastLabel() {
+        switch (this.period) {
+            case "Daily":
+                return "Yesterday";
+            case "Weekly":
+                return "Last Week";
+            case "Monthly":
+                return "Last Month";
+        }
     }
-  }
-  getIcon() {
-    switch (this.category) {
-      case "Work":
-        return "work";
-      case "Play":
-        return "play";
-      case "Study":
-        return "study";
-      case "Exercise":
-        return "exercise";
-      case "Social":
-        return "social";
-      case "Self Care":
-        return "self-care";
+    getBackgroundColor() {
+        switch (this.category) {
+            case "Work":
+                return "bg-orange-300";
+            case "Play":
+                return "bg-blue-300";
+            case "Study":
+                return "bg-pink-400";
+            case "Exercise":
+                return "bg-green-400";
+            case "Social":
+                return "bg-purple-700";
+            case "Self Care":
+                return "bg-yellow-300";
+        }
     }
-  }
+    getIcon() {
+        switch (this.category) {
+            case "Work":
+                return "work";
+            case "Play":
+                return "play";
+            case "Study":
+                return "study";
+            case "Exercise":
+                return "exercise";
+            case "Social":
+                return "social";
+            case "Self Care":
+                return "self-care";
+        }
+    }
 };
-__decorate([property({ type: String })], Card.prototype, "category", void 0);
-__decorate([property({ type: String })], Card.prototype, "period", void 0);
-__decorate([property({ type: Number })], Card.prototype, "currAmount", void 0);
-__decorate([property({ type: Number })], Card.prototype, "lastAmount", void 0);
-Card = __decorate([customElement("cbm-card")], Card);
+__decorate([
+    property({ type: String })
+], Card.prototype, "category", void 0);
+__decorate([
+    property({ type: String })
+], Card.prototype, "period", void 0);
+__decorate([
+    property({ type: Number })
+], Card.prototype, "currAmount", void 0);
+__decorate([
+    property({ type: Number })
+], Card.prototype, "lastAmount", void 0);
+Card = __decorate([
+    customElement("cbm-card")
+], Card);
 export default Card;

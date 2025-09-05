@@ -5,7 +5,7 @@
     "target": "es2015",
     "lib": ["esnext", "dom"],
     "moduleResolution": "node",
-    "module": "esnext"
+    "module": "es2015",
   },
   "include": ["components/**/*"],
   "exclude": ["node_modules", ".vscode"]

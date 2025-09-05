@@ -6,7 +6,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { LitElement, html, adoptStyles } from "lit";
 import { customElement, property, query, state } from "lit/decorators.js";
-import sheet from "./../styles/tw.css" with { type: "css" };
 let InputText = class InputText extends LitElement {
     constructor() {
         super(...arguments);
@@ -19,7 +18,15 @@ let InputText = class InputText extends LitElement {
         this._errorId = `error-${Math.random().toString(36).slice(2)}`;
     }
     firstUpdated(_changedProperties) {
-        adoptStyles(this.renderRoot, [sheet]);
+        fetch("./styles/tw.css")
+            .then((res) => {
+            return res.text();
+        })
+            .then((cssText) => {
+            const sheet = new CSSStyleSheet();
+            sheet.replaceSync(cssText);
+            adoptStyles(this.renderRoot, [sheet]);
+        });
         this._syncInputRef();
     }
     _syncInputRef() {
